@@ -6,3 +6,9 @@ results/**/.scala-build/
 results/**/__pycache__/
 results/**/.pytest_cache/
 results/**/Cargo.lock
+
+# ベンチ実行で生じるビルド成果物・実行ログ
+results/**/task_api
+results/*.log
+__pycache__/
+*.pyc
