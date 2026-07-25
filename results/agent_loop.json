@@ -1,0 +1,278 @@
+{
+  "summary": {
+    "episodes": 3,
+    "solved": 3,
+    "turns_per_episode": [
+      7,
+      7,
+      9
+    ],
+    "total_turns": 23,
+    "malformed_turns": 0,
+    "malformed_breakdown": {},
+    "turn_latency_s": {
+      "min": 0.51,
+      "median": 0.91,
+      "max": 4.75
+    }
+  },
+  "episodes": [
+    {
+      "turns": [
+        {
+          "turn": 1,
+          "secs": 1.33,
+          "completion_tokens": 45,
+          "prompt_tokens": 626,
+          "n_calls": 1,
+          "tool": "list_dir",
+          "status": "ok",
+          "result_head": "README.md\npytest.ini\nstatslib/\ntests/"
+        },
+        {
+          "turn": 2,
+          "secs": 0.51,
+          "completion_tokens": 17,
+          "prompt_tokens": 678,
+          "n_calls": 1,
+          "tool": "run_tests",
+          "status": "ok",
+          "result_head": "exit=1\n..FF.F.                                                                  [100%]\n================================="
+        },
+        {
+          "turn": 3,
+          "secs": 0.72,
+          "completion_tokens": 28,
+          "prompt_tokens": 1180,
+          "n_calls": 1,
+          "tool": "list_dir",
+          "status": "ok",
+          "result_head": "core.py"
+        },
+        {
+          "turn": 4,
+          "secs": 0.99,
+          "completion_tokens": 53,
+          "prompt_tokens": 1225,
+          "n_calls": 1,
+          "tool": "read_file",
+          "status": "ok",
+          "result_head": "   1| \"\"\"Small statistics helpers.\"\"\"\n   2| \n   3| \n   4| def mean(values):\n   5|     if not values:\n   6|         raise"
+        },
+        {
+          "turn": 5,
+          "secs": 4.75,
+          "completion_tokens": 328,
+          "prompt_tokens": 1613,
+          "n_calls": 1,
+          "tool": "write_file",
+          "status": "ok",
+          "result_head": "wrote statslib/core.py (719 bytes)"
+        },
+        {
+          "turn": 6,
+          "secs": 0.72,
+          "completion_tokens": 30,
+          "prompt_tokens": 1874,
+          "n_calls": 1,
+          "tool": "run_tests",
+          "status": "ok",
+          "result_head": "exit=0\n.......                                                                  [100%]\n7 passed in 0.01s\n"
+        },
+        {
+          "turn": 7,
+          "secs": 1.34,
+          "completion_tokens": 79,
+          "prompt_tokens": 1928,
+          "n_calls": 1,
+          "tool": "finish",
+          "status": "ok",
+          "result_head": "finished: Fixed the median() function: for even-length lists, it was returning the higher middle value instead of the av"
+        }
+      ],
+      "n_turns": 7,
+      "called_finish": true,
+      "tests_pass": true,
+      "tool_errors": 0,
+      "episode": 1
+    },
+    {
+      "turns": [
+        {
+          "turn": 1,
+          "secs": 1.48,
+          "completion_tokens": 55,
+          "prompt_tokens": 626,
+          "n_calls": 1,
+          "tool": "list_dir",
+          "status": "ok",
+          "result_head": "README.md\npytest.ini\nstatslib/\ntests/"
+        },
+        {
+          "turn": 2,
+          "secs": 0.86,
+          "completion_tokens": 44,
+          "prompt_tokens": 678,
+          "n_calls": 1,
+          "tool": "list_dir",
+          "status": "ok",
+          "result_head": "core.py"
+        },
+        {
+          "turn": 3,
+          "secs": 0.76,
+          "completion_tokens": 36,
+          "prompt_tokens": 724,
+          "n_calls": 1,
+          "tool": "run_tests",
+          "status": "ok",
+          "result_head": "exit=1\n..FF.F.                                                                  [100%]\n================================="
+        },
+        {
+          "turn": 4,
+          "secs": 1.0,
+          "completion_tokens": 49,
+          "prompt_tokens": 1226,
+          "n_calls": 1,
+          "tool": "read_file",
+          "status": "ok",
+          "result_head": "   1| \"\"\"Small statistics helpers.\"\"\"\n   2| \n   3| \n   4| def mean(values):\n   5|     if not values:\n   6|         raise"
+        },
+        {
+          "turn": 5,
+          "secs": 4.5,
+          "completion_tokens": 310,
+          "prompt_tokens": 1614,
+          "n_calls": 1,
+          "tool": "write_file",
+          "status": "ok",
+          "result_head": "wrote statslib/core.py (719 bytes)"
+        },
+        {
+          "turn": 6,
+          "secs": 0.73,
+          "completion_tokens": 30,
+          "prompt_tokens": 1904,
+          "n_calls": 1,
+          "tool": "run_tests",
+          "status": "ok",
+          "result_head": "exit=0\n.......                                                                  [100%]\n7 passed in 0.01s\n"
+        },
+        {
+          "turn": 7,
+          "secs": 1.26,
+          "completion_tokens": 73,
+          "prompt_tokens": 1958,
+          "n_calls": 1,
+          "tool": "finish",
+          "status": "ok",
+          "result_head": "finished: Fixed the median() function to correctly compute the average of the two middle values for even-length lists in"
+        }
+      ],
+      "n_turns": 7,
+      "called_finish": true,
+      "tests_pass": true,
+      "tool_errors": 0,
+      "episode": 2
+    },
+    {
+      "turns": [
+        {
+          "turn": 1,
+          "secs": 1.34,
+          "completion_tokens": 42,
+          "prompt_tokens": 626,
+          "n_calls": 1,
+          "tool": "list_dir",
+          "status": "ok",
+          "result_head": "README.md\npytest.ini\nstatslib/\ntests/"
+        },
+        {
+          "turn": 2,
+          "secs": 0.85,
+          "completion_tokens": 43,
+          "prompt_tokens": 678,
+          "n_calls": 1,
+          "tool": "list_dir",
+          "status": "ok",
+          "result_head": "core.py"
+        },
+        {
+          "turn": 3,
+          "secs": 0.91,
+          "completion_tokens": 47,
+          "prompt_tokens": 723,
+          "n_calls": 1,
+          "tool": "read_file",
+          "status": "ok",
+          "result_head": "   1| \"\"\"Small statistics helpers.\"\"\"\n   2| \n   3| \n   4| def mean(values):\n   5|     if not values:\n   6|         raise"
+        },
+        {
+          "turn": 4,
+          "secs": 0.87,
+          "completion_tokens": 40,
+          "prompt_tokens": 1111,
+          "n_calls": 1,
+          "tool": "list_dir",
+          "status": "ok",
+          "result_head": "test_core.py"
+        },
+        {
+          "turn": 5,
+          "secs": 0.88,
+          "completion_tokens": 45,
+          "prompt_tokens": 1156,
+          "n_calls": 1,
+          "tool": "read_file",
+          "status": "ok",
+          "result_head": "   1| import pytest\n   2| \n   3| from statslib.core import mean, median, spread, summary\n   4| \n   5| \n   6| def test_me"
+        },
+        {
+          "turn": 6,
+          "secs": 0.74,
+          "completion_tokens": 29,
+          "prompt_tokens": 1604,
+          "n_calls": 1,
+          "tool": "run_tests",
+          "status": "ok",
+          "result_head": "exit=1\n..FF.F.                                                                  [100%]\n================================="
+        },
+        {
+          "turn": 7,
+          "secs": 4.04,
+          "completion_tokens": 274,
+          "prompt_tokens": 2106,
+          "n_calls": 1,
+          "tool": "write_file",
+          "status": "ok",
+          "result_head": "wrote statslib/core.py (719 bytes)"
+        },
+        {
+          "turn": 8,
+          "secs": 0.65,
+          "completion_tokens": 24,
+          "prompt_tokens": 2367,
+          "n_calls": 1,
+          "tool": "run_tests",
+          "status": "ok",
+          "result_head": "exit=0\n.......                                                                  [100%]\n7 passed in 0.01s\n"
+        },
+        {
+          "turn": 9,
+          "secs": 2.3,
+          "completion_tokens": 150,
+          "prompt_tokens": 2421,
+          "n_calls": 1,
+          "tool": "finish",
+          "status": "ok",
+          "result_head": "finished: Fixed the median() function in statslib/core.py: for even-length lists, it now returns the average of the two "
+        }
+      ],
+      "n_turns": 9,
+      "called_finish": true,
+      "tests_pass": true,
+      "tool_errors": 0,
+      "episode": 3
+    }
+  ]
+}

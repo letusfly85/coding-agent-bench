@@ -15,10 +15,14 @@ bench/
     run_coding_task.py     # llama-server に対してコーディングタスクを投げる
     run_repeat.sh          # 各タスクを N 回繰り返して pass@1 を出す
     run_repair.sh          # ビルドエラーを返して再生成させる
+    tool_call_fidelity.py  # 単発 tool call の JSON/スキーマ/ツール選択の正確性
+    agent_loop.py          # 実ファイルを操作する多ターンエージェントループ
   tasks/
-    rust-axum-rest/
+    rust-axum-rest/        # 生成タスク（他に go / python / scala）
       PROMPT.md            # タスク仕様（モデルへの入力）
       verify.sh            # 生成物の検証（cargo build / cargo test）
+    agent-fix-bug/         # エージェント用: 1 ファイル 1 バグ
+    agent-multi-bug/       # エージェント用: 2 ファイル 3 バグ
 docs/
   reports/                 # 計測レポート
 results/                   # 生成物・生ログ（gitignore 対象外の要約のみコミット）
@@ -32,6 +36,8 @@ results/                   # 生成物・生ログ（gitignore 対象外の要�
 | VRAM | quant × context 長での実測使用量、収まる上限 |
 | 一発正答率 | 生成コードが無修正で `cargo build` / `cargo test` を通るか |
 | 指示追従 | 指定した出力フォーマット（ファイル分割）を守れるか |
+| tool calling | tool call の JSON 妥当性・スキーマ準拠・ツール選択の正確性 |
+| エージェント完遂率 | 実ファイルを操作する多ターンループでタスクを完遂できるか |
 
 ## レポート
 
