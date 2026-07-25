@@ -1,0 +1,382 @@
+{
+  "summary": {
+    "episodes": 5,
+    "solved": 5,
+    "turns_per_episode": [
+      5,
+      6,
+      5,
+      6,
+      9
+    ],
+    "total_turns": 31,
+    "malformed_turns": 0,
+    "malformed_breakdown": {},
+    "coder_calls_per_episode": [
+      1,
+      1,
+      1,
+      1,
+      2
+    ],
+    "coder_tokens_total": 23716,
+    "orchestrator_turn_latency_s": {
+      "min": 1.34,
+      "median": 2.91,
+      "max": 20.06
+    }
+  },
+  "episodes": [
+    {
+      "turns": [
+        {
+          "turn": 1,
+          "secs": 2.97,
+          "n_calls": 1,
+          "completion_tokens": 59,
+          "tool": "list_dir",
+          "status": "ok",
+          "result_head": "README.md\ngo.mod\nmain_test.go"
+        },
+        {
+          "turn": 2,
+          "secs": 1.34,
+          "n_calls": 1,
+          "completion_tokens": 42,
+          "tool": "read_file",
+          "status": "ok",
+          "result_head": "   1| package main\n   2| \n   3| import (\n   4| \t\"bytes\"\n   5| \t\"encoding/json\"\n   6| \t\"net/http\"\n   7| \t\"net/h"
+        },
+        {
+          "turn": 3,
+          "secs": 13.8,
+          "n_calls": 1,
+          "completion_tokens": 569,
+          "tool": "write_code",
+          "status": "ok",
+          "coder_secs": 73.02,
+          "coder_tokens": 3485,
+          "result_head": "wrote main.go (3508 bytes) via the coder model"
+        },
+        {
+          "turn": 4,
+          "secs": 2.15,
+          "n_calls": 1,
+          "completion_tokens": 30,
+          "tool": "run_tests",
+          "status": "ok",
+          "result_head": "exit=0\nok  \ttask_api\t0.033s\n"
+        },
+        {
+          "turn": 5,
+          "secs": 2.09,
+          "n_calls": 1,
+          "completion_tokens": 78,
+          "tool": "finish",
+          "status": "ok",
+          "result_head": "finished: Implemented main.go with a small in-memory HTTP task API (GET/POST/PUT/DELETE /tasks, GET /health) t"
+        }
+      ],
+      "n_turns": 5,
+      "called_finish": true,
+      "tests_pass": true,
+      "test_file_untouched": true,
+      "tool_errors": 0,
+      "coder_calls": 1,
+      "coder_tokens": 3485,
+      "episode": 1
+    },
+    {
+      "turns": [
+        {
+          "turn": 1,
+          "secs": 2.97,
+          "n_calls": 1,
+          "completion_tokens": 74,
+          "tool": "list_dir",
+          "status": "ok",
+          "result_head": "README.md\ngo.mod\nmain_test.go"
+        },
+        {
+          "turn": 2,
+          "secs": 1.42,
+          "n_calls": 1,
+          "completion_tokens": 45,
+          "tool": "read_file",
+          "status": "ok",
+          "result_head": "   1| package main\n   2| \n   3| import (\n   4| \t\"bytes\"\n   5| \t\"encoding/json\"\n   6| \t\"net/http\"\n   7| \t\"net/h"
+        },
+        {
+          "turn": 3,
+          "secs": 6.79,
+          "n_calls": 1,
+          "completion_tokens": 229,
+          "tool": "read_file",
+          "status": "ok",
+          "result_head": "   1| module task_api\n   2| \n   3| go 1.22"
+        },
+        {
+          "turn": 4,
+          "secs": 14.49,
+          "n_calls": 1,
+          "completion_tokens": 678,
+          "tool": "write_code",
+          "status": "ok",
+          "coder_secs": 65.25,
+          "coder_tokens": 3104,
+          "result_head": "wrote main.go (3847 bytes) via the coder model"
+        },
+        {
+          "turn": 5,
+          "secs": 2.32,
+          "n_calls": 1,
+          "completion_tokens": 36,
+          "tool": "run_tests",
+          "status": "ok",
+          "result_head": "exit=0\nok  \ttask_api\t0.033s\n"
+        },
+        {
+          "turn": 6,
+          "secs": 2.11,
+          "n_calls": 1,
+          "completion_tokens": 78,
+          "tool": "finish",
+          "status": "ok",
+          "result_head": "finished: Implemented main.go with an in-memory task API: Task struct, App() returning http.Handler, and endpo"
+        }
+      ],
+      "n_turns": 6,
+      "called_finish": true,
+      "tests_pass": true,
+      "test_file_untouched": true,
+      "tool_errors": 0,
+      "coder_calls": 1,
+      "coder_tokens": 3104,
+      "episode": 2
+    },
+    {
+      "turns": [
+        {
+          "turn": 1,
+          "secs": 2.91,
+          "n_calls": 1,
+          "completion_tokens": 72,
+          "tool": "list_dir",
+          "status": "ok",
+          "result_head": "README.md\ngo.mod\nmain_test.go"
+        },
+        {
+          "turn": 2,
+          "secs": 1.49,
+          "n_calls": 1,
+          "completion_tokens": 48,
+          "tool": "read_file",
+          "status": "ok",
+          "result_head": "   1| package main\n   2| \n   3| import (\n   4| \t\"bytes\"\n   5| \t\"encoding/json\"\n   6| \t\"net/http\"\n   7| \t\"net/h"
+        },
+        {
+          "turn": 3,
+          "secs": 14.94,
+          "n_calls": 1,
+          "completion_tokens": 623,
+          "tool": "write_code",
+          "status": "ok",
+          "coder_secs": 63.78,
+          "coder_tokens": 3038,
+          "result_head": "wrote main.go (3597 bytes) via the coder model"
+        },
+        {
+          "turn": 4,
+          "secs": 2.33,
+          "n_calls": 1,
+          "completion_tokens": 31,
+          "tool": "run_tests",
+          "status": "ok",
+          "result_head": "exit=0\nok  \ttask_api\t0.031s\n"
+        },
+        {
+          "turn": 5,
+          "secs": 2.47,
+          "n_calls": 1,
+          "completion_tokens": 94,
+          "tool": "finish",
+          "status": "ok",
+          "result_head": "finished: Implemented a minimal Go HTTP task API (main.go) with in-memory store and endpoints for /health, /ta"
+        }
+      ],
+      "n_turns": 5,
+      "called_finish": true,
+      "tests_pass": true,
+      "test_file_untouched": true,
+      "tool_errors": 0,
+      "coder_calls": 1,
+      "coder_tokens": 3038,
+      "episode": 3
+    },
+    {
+      "turns": [
+        {
+          "turn": 1,
+          "secs": 3.0,
+          "n_calls": 1,
+          "completion_tokens": 75,
+          "tool": "list_dir",
+          "status": "ok",
+          "result_head": "README.md\ngo.mod\nmain_test.go"
+        },
+        {
+          "turn": 2,
+          "secs": 1.4,
+          "n_calls": 1,
+          "completion_tokens": 43,
+          "tool": "read_file",
+          "status": "ok",
+          "result_head": "   1| package main\n   2| \n   3| import (\n   4| \t\"bytes\"\n   5| \t\"encoding/json\"\n   6| \t\"net/http\"\n   7| \t\"net/h"
+        },
+        {
+          "turn": 3,
+          "secs": 6.12,
+          "n_calls": 1,
+          "completion_tokens": 198,
+          "tool": "read_file",
+          "status": "ok",
+          "result_head": "   1| module task_api\n   2| \n   3| go 1.22"
+        },
+        {
+          "turn": 4,
+          "secs": 14.91,
+          "n_calls": 1,
+          "completion_tokens": 693,
+          "tool": "write_code",
+          "status": "ok",
+          "coder_secs": 35.32,
+          "coder_tokens": 1660,
+          "result_head": "wrote main.go (3875 bytes) via the coder model"
+        },
+        {
+          "turn": 5,
+          "secs": 2.23,
+          "n_calls": 1,
+          "completion_tokens": 29,
+          "tool": "run_tests",
+          "status": "ok",
+          "result_head": "exit=0\nok  \ttask_api\t0.027s\n"
+        },
+        {
+          "turn": 6,
+          "secs": 3.78,
+          "n_calls": 1,
+          "completion_tokens": 157,
+          "tool": "finish",
+          "status": "ok",
+          "result_head": "finished: Implemented main.go with a Task struct and an App() function that returns an http.Handler supporting"
+        }
+      ],
+      "n_turns": 6,
+      "called_finish": true,
+      "tests_pass": true,
+      "test_file_untouched": true,
+      "tool_errors": 0,
+      "coder_calls": 1,
+      "coder_tokens": 1660,
+      "episode": 4
+    },
+    {
+      "turns": [
+        {
+          "turn": 1,
+          "secs": 3.67,
+          "n_calls": 1,
+          "completion_tokens": 108,
+          "tool": "list_dir",
+          "status": "ok",
+          "result_head": "README.md\ngo.mod\nmain_test.go"
+        },
+        {
+          "turn": 2,
+          "secs": 1.48,
+          "n_calls": 1,
+          "completion_tokens": 47,
+          "tool": "read_file",
+          "status": "ok",
+          "result_head": "   1| package main\n   2| \n   3| import (\n   4| \t\"bytes\"\n   5| \t\"encoding/json\"\n   6| \t\"net/http\"\n   7| \t\"net/h"
+        },
+        {
+          "turn": 3,
+          "secs": 7.32,
+          "n_calls": 1,
+          "completion_tokens": 256,
+          "tool": "read_file",
+          "status": "ok",
+          "result_head": "   1| module task_api\n   2| \n   3| go 1.22"
+        },
+        {
+          "turn": 4,
+          "secs": 20.06,
+          "n_calls": 1,
+          "completion_tokens": 945,
+          "tool": "write_code",
+          "status": "ok",
+          "coder_secs": 151.82,
+          "coder_tokens": 7258,
+          "result_head": "wrote main.go (3711 bytes) via the coder model"
+        },
+        {
+          "turn": 5,
+          "secs": 2.75,
+          "n_calls": 1,
+          "completion_tokens": 29,
+          "tool": "run_tests",
+          "status": "ok",
+          "result_head": "exit=1\nFAIL\ttask_api [build failed]\nFAIL\n# task_api [task_api.test]\n./main.go:23:6: App redeclared in this blo"
+        },
+        {
+          "turn": 6,
+          "secs": 1.77,
+          "n_calls": 1,
+          "completion_tokens": 56,
+          "tool": "read_file",
+          "status": "ok",
+          "result_head": "   1| package main\n   2| \n   3| import (\n   4| \t\"encoding/json\"\n   5| \t\"net/http\"\n   6| \t\"strconv\"\n   7| \t\"str"
+        },
+        {
+          "turn": 7,
+          "secs": 19.0,
+          "n_calls": 1,
+          "completion_tokens": 808,
+          "tool": "write_code",
+          "status": "ok",
+          "coder_secs": 108.58,
+          "coder_tokens": 5171,
+          "result_head": "wrote main.go (3182 bytes) via the coder model"
+        },
+        {
+          "turn": 8,
+          "secs": 2.62,
+          "n_calls": 1,
+          "completion_tokens": 18,
+          "tool": "run_tests",
+          "status": "ok",
+          "result_head": "exit=0\nok  \ttask_api\t0.030s\n"
+        },
+        {
+          "turn": 9,
+          "secs": 3.09,
+          "n_calls": 1,
+          "completion_tokens": 123,
+          "tool": "finish",
+          "status": "ok",
+          "result_head": "finished: Implemented a minimal in-memory REST task API (main.go) that passes all tests:\n- Task struct with ID"
+        }
+      ],
+      "n_turns": 9,
+      "called_finish": true,
+      "tests_pass": true,
+      "test_file_untouched": true,
+      "tool_errors": 0,
+      "coder_calls": 2,
+      "coder_tokens": 12429,
+      "episode": 5
+    }
+  ]
+}

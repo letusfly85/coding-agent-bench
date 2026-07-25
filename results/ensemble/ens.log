@@ -1,0 +1,752 @@
+##################### go / ensemble #####################
+
+===== episode 1 =====
+  t 1 ok               list_dir      1.29s  'README.md\ngo.mod\nmain_test.go'
+  t 2 ok               read_file     0.43s  '   1| package main\n   2| \n   3| import (\n   4| \t"bytes"\n'
+  t 3 ok               read_file     2.67s  '   1| module task_api\n   2| \n   3| go 1.22'
+  t 4 ok               write_code   10.24s  'wrote main.go (3999 bytes) via the coder model'
+  t 5 ok               run_tests     0.54s  'exit=1\n--- FAIL: TestGetAfterCreate (0.00s)\n    main_tes'
+  t 6 ok               write_code   10.78s  'wrote main.go (4186 bytes) via the coder model'
+  t 7 ok               run_tests     0.43s  'exit=0\nok  \ttask_api\t0.036s\n'
+  t 8 ok               finish        2.04s  'finished: Successfully implemented the task API. The sol'
+  -> turns=8 finish=True tests_pass=True untouched=True coder_calls=2 coder_tokens=2596
+
+===== episode 2 =====
+  t 1 ok               read_file     1.23s  'error: no such file: test_suite.py'
+  t 2 ok               list_dir      0.51s  'README.md\ngo.mod\nmain_test.go'
+  t 3 ok               read_file     0.62s  '   1| package main\n   2| \n   3| import (\n   4| \t"bytes"\n'
+  t 4 ok               read_file     1.66s  '   1| module task_api\n   2| \n   3| go 1.22'
+  t 5 ok               list_dir      1.32s  'README.md\ngo.mod\nmain_test.go'
+  t 6 ok               write_code    8.75s  'wrote main.go (3595 bytes) via the coder model'
+  t 7 ok               run_tests     0.54s  'exit=0\nok  \ttask_api\t0.030s\n'
+  t 8 ok               run_tests     0.55s  'exit=0\nok  \ttask_api\t(cached)\n'
+  t 9 ok               finish        2.20s  'finished: All tests pass. Implemented a task API with he'
+  -> turns=9 finish=True tests_pass=True untouched=True coder_calls=1 coder_tokens=2620
+
+===== episode 3 =====
+  t 1 ok               read_file     1.08s  'error: no such file: tests'
+  t 2 ok               list_dir      0.44s  'README.md\ngo.mod\nmain_test.go'
+  t 3 ok               read_file     0.47s  '   1| package main\n   2| \n   3| import (\n   4| \t"bytes"\n'
+  t 4 ok               read_file     1.56s  '   1| module task_api\n   2| \n   3| go 1.22'
+  t 5 ok               run_tests     0.42s  'exit=1\nFAIL\ttask_api [build failed]\nFAIL\n# task_api [tas'
+  t 6 ok               write_code    9.07s  'wrote main.go (3618 bytes) via the coder model'
+  t 7 ok               run_tests     0.42s  'exit=1\n--- FAIL: TestListIsSortedByID (0.00s)\n    main_t'
+  t 8 ok               write_code    9.32s  'wrote main.go (3652 bytes) via the coder model'
+  t 9 ok               run_tests     0.43s  'exit=0\nok  \ttask_api\t0.029s\n'
+  t10 ok               finish        1.36s  'finished: All tests now pass. The implementation include'
+  -> turns=10 finish=True tests_pass=True untouched=True coder_calls=2 coder_tokens=3989
+
+===== episode 4 =====
+  t 1 ok               list_dir      1.26s  'README.md\ngo.mod\nmain_test.go'
+  t 2 ok               read_file     0.46s  '   1| package main\n   2| \n   3| import (\n   4| \t"bytes"\n'
+  t 3 ok               read_file     1.66s  '   1| module task_api\n   2| \n   3| go 1.22'
+  t 4 ok               read_file     0.60s  '   1| # task_api\n   2| \n   3| An in-memory task REST API'
+  t 5 ok               run_tests     1.51s  'exit=1\nFAIL\ttask_api [build failed]\nFAIL\n# task_api [tas'
+  t 6 ok               write_code   11.10s  'wrote main.go (4153 bytes) via the coder model'
+  t 7 ok               run_tests     0.57s  'exit=0\nok  \ttask_api\t0.033s\n'
+  t 8 ok               run_tests     0.56s  'exit=0\nok  \ttask_api\t(cached)\n'
+  t 9 ok               finish        2.66s  'finished: All tests are passing. I implemented a complet'
+  -> turns=9 finish=True tests_pass=True untouched=True coder_calls=1 coder_tokens=1357
+
+===== episode 5 =====
+  t 1 ok               list_dir      1.20s  'README.md\ngo.mod\nmain_test.go'
+  t 2 ok               read_file     0.44s  '   1| package main\n   2| \n   3| import (\n   4| \t"bytes"\n'
+  t 3 ok               read_file     1.54s  '   1| module task_api\n   2| \n   3| go 1.22'
+  t 4 ok               read_file     0.45s  '   1| # task_api\n   2| \n   3| An in-memory task REST API'
+  t 5 ok               run_tests     2.05s  'exit=1\nFAIL\ttask_api [build failed]\nFAIL\n# task_api [tas'
+  t 6 ok               write_code   10.84s  'wrote main.go (4428 bytes) via the coder model'
+  t 7 ok               run_tests     0.56s  'exit=0\nok  \ttask_api\t0.033s\n'
+  t 8 ok               run_tests     0.54s  'exit=0\nok  \ttask_api\t(cached)\n'
+  t 9 ok               finish        1.99s  'finished: All tests pass. I implemented a task REST API '
+  -> turns=9 finish=True tests_pass=True untouched=True coder_calls=1 coder_tokens=3149
+
+=== SUMMARY ===
+{
+  "episodes": 5,
+  "solved": 5,
+  "turns_per_episode": [
+    8,
+    9,
+    10,
+    9,
+    9
+  ],
+  "total_turns": 45,
+  "malformed_turns": 0,
+  "malformed_breakdown": {},
+  "coder_calls_per_episode": [
+    2,
+    1,
+    2,
+    1,
+    1
+  ],
+  "coder_tokens_total": 13711,
+  "orchestrator_turn_latency_s": {
+    "min": 0.42,
+    "median": 1.23,
+    "max": 11.1
+  }
+}
+----- go/ensemble done -----
+##################### go / cn-solo #####################
+
+===== episode 1 =====
+  t 1 ok               read_file     1.01s  'error: no such file: test.py'
+  t 2 ok               list_dir      0.50s  'README.md\ngo.mod\nmain_test.go'
+  t 3 ok               read_file     0.51s  '   1| package main\n   2| \n   3| import (\n   4| \t"bytes"\n'
+  t 4 ok               write_code   12.07s  'wrote main.go (3923 bytes) via the coder model'
+  t 5 ok               run_tests     0.81s  'exit=1\n--- FAIL: TestGetAfterCreate (0.00s)\n    main_tes'
+  t 6 ok               write_code   38.44s  'wrote main.go (4145 bytes) via the coder model'
+  t 7 ok               run_tests     0.69s  'exit=0\nok  \ttask_api\t0.031s\n'
+  t 8 ok               finish        1.33s  'finished: The implementation was missing. I created main'
+  -> turns=8 finish=True tests_pass=True untouched=True coder_calls=2 coder_tokens=2180
+
+===== episode 2 =====
+  t 1 ok               read_file     1.20s  'error: no such file: test'
+  t 2 ok               list_dir      0.50s  'README.md\ngo.mod\nmain_test.go'
+  t 3 ok               read_file     0.55s  '   1| package main\n   2| \n   3| import (\n   4| \t"bytes"\n'
+  t 4 ok               list_dir      1.65s  'README.md\ngo.mod\nmain_test.go'
+  t 5 ok               read_file     0.56s  '   1| module task_api\n   2| \n   3| go 1.22'
+  t 6 ok               write_code   10.09s  'wrote main.go (3327 bytes) via the coder model'
+  t 7 ok               run_tests     0.84s  'exit=0\nok  \ttask_api\t0.030s\n'
+  t 8 ok               finish        2.07s  'finished: Successfully implemented the task API in main.'
+  -> turns=8 finish=True tests_pass=True untouched=True coder_calls=1 coder_tokens=973
+
+===== episode 3 =====
+  t 1 ok               read_file     1.14s  'error: no such file: test.py'
+  t 2 ok               list_dir      0.50s  'README.md\ngo.mod\nmain_test.go'
+  t 3 ok               read_file     0.63s  '   1| package main\n   2| \n   3| import (\n   4| \t"bytes"\n'
+  t 4 ok               read_file     1.67s  '   1| # task_api\n   2| \n   3| An in-memory task REST API'
+  t 5 ok               read_file     0.64s  '   1| module task_api\n   2| \n   3| go 1.22'
+  t 6 ok               write_code   11.07s  'wrote main.go (4214 bytes) via the coder model'
+  t 7 ok               run_tests     0.78s  'exit=0\nok  \ttask_api\t0.030s\n'
+  t 8 ok               run_tests     0.52s  'exit=0\nok  \ttask_api\t(cached)\n'
+  t 9 ok               finish        2.32s  "finished: I've implemented the task API in main.go that "
+  -> turns=9 finish=True tests_pass=True untouched=True coder_calls=1 coder_tokens=1165
+
+===== episode 4 =====
+  t 1 ok               list_dir      0.99s  'README.md\ngo.mod\nmain_test.go'
+  t 2 ok               read_file     0.44s  '   1| package main\n   2| \n   3| import (\n   4| \t"bytes"\n'
+  t 3 ok               read_file     1.53s  '   1| module task_api\n   2| \n   3| go 1.22'
+  t 4 ok               read_file     0.43s  '   1| # task_api\n   2| \n   3| An in-memory task REST API'
+  t 5 ok               write_code   10.52s  'wrote main.go (4289 bytes) via the coder model'
+  t 6 ok               run_tests     0.67s  'exit=0\nok  \ttask_api\t0.034s\n'
+  t 7 ok               finish        1.38s  'finished: All tests pass. Implemented a complete in-memo'
+  -> turns=7 finish=True tests_pass=True untouched=True coder_calls=1 coder_tokens=1162
+
+===== episode 5 =====
+  t 1 ok               read_file     1.11s  'error: no such file: test.py'
+  t 2 ok               list_dir      0.50s  'README.md\ngo.mod\nmain_test.go'
+  t 3 ok               read_file     0.57s  '   1| package main\n   2| \n   3| import (\n   4| \t"bytes"\n'
+  t 4 ok               read_file     1.68s  '   1| module task_api\n   2| \n   3| go 1.22'
+  t 5 ok               list_dir      0.44s  'README.md\ngo.mod\nmain_test.go'
+  t 6 ok               run_tests     1.37s  'exit=1\nFAIL\ttask_api [build failed]\nFAIL\n# task_api [tas'
+  t 7 ok               write_code    8.16s  'wrote main.go (3039 bytes) via the coder model'
+  t 8 ok               run_tests     0.78s  'exit=0\nok  \ttask_api\t0.028s\n'
+  t 9 ok               finish        1.90s  'finished: The tests are now passing. I implemented the t'
+  -> turns=9 finish=True tests_pass=True untouched=True coder_calls=1 coder_tokens=839
+
+=== SUMMARY ===
+{
+  "episodes": 5,
+  "solved": 5,
+  "turns_per_episode": [
+    8,
+    8,
+    9,
+    7,
+    9
+  ],
+  "total_turns": 41,
+  "malformed_turns": 0,
+  "malformed_breakdown": {},
+  "coder_calls_per_episode": [
+    2,
+    1,
+    1,
+    1,
+    1
+  ],
+  "coder_tokens_total": 6319,
+  "orchestrator_turn_latency_s": {
+    "min": 0.43,
+    "median": 0.99,
+    "max": 38.44
+  }
+}
+----- go/cn-solo done -----
+##################### go / 27b-solo #####################
+
+===== episode 1 =====
+  t 1 ok               list_dir      2.97s  'README.md\ngo.mod\nmain_test.go'
+  t 2 ok               read_file     1.34s  '   1| package main\n   2| \n   3| import (\n   4| \t"bytes"\n'
+  t 3 ok               write_code   13.80s  'wrote main.go (3508 bytes) via the coder model'
+  t 4 ok               run_tests     2.15s  'exit=0\nok  \ttask_api\t0.033s\n'
+  t 5 ok               finish        2.09s  'finished: Implemented main.go with a small in-memory HTT'
+  -> turns=5 finish=True tests_pass=True untouched=True coder_calls=1 coder_tokens=3485
+
+===== episode 2 =====
+  t 1 ok               list_dir      2.97s  'README.md\ngo.mod\nmain_test.go'
+  t 2 ok               read_file     1.42s  '   1| package main\n   2| \n   3| import (\n   4| \t"bytes"\n'
+  t 3 ok               read_file     6.79s  '   1| module task_api\n   2| \n   3| go 1.22'
+  t 4 ok               write_code   14.49s  'wrote main.go (3847 bytes) via the coder model'
+  t 5 ok               run_tests     2.32s  'exit=0\nok  \ttask_api\t0.033s\n'
+  t 6 ok               finish        2.11s  'finished: Implemented main.go with an in-memory task API'
+  -> turns=6 finish=True tests_pass=True untouched=True coder_calls=1 coder_tokens=3104
+
+===== episode 3 =====
+  t 1 ok               list_dir      2.91s  'README.md\ngo.mod\nmain_test.go'
+  t 2 ok               read_file     1.49s  '   1| package main\n   2| \n   3| import (\n   4| \t"bytes"\n'
+  t 3 ok               write_code   14.94s  'wrote main.go (3597 bytes) via the coder model'
+  t 4 ok               run_tests     2.33s  'exit=0\nok  \ttask_api\t0.031s\n'
+  t 5 ok               finish        2.47s  'finished: Implemented a minimal Go HTTP task API (main.g'
+  -> turns=5 finish=True tests_pass=True untouched=True coder_calls=1 coder_tokens=3038
+
+===== episode 4 =====
+  t 1 ok               list_dir      3.00s  'README.md\ngo.mod\nmain_test.go'
+  t 2 ok               read_file     1.40s  '   1| package main\n   2| \n   3| import (\n   4| \t"bytes"\n'
+  t 3 ok               read_file     6.12s  '   1| module task_api\n   2| \n   3| go 1.22'
+  t 4 ok               write_code   14.91s  'wrote main.go (3875 bytes) via the coder model'
+  t 5 ok               run_tests     2.23s  'exit=0\nok  \ttask_api\t0.027s\n'
+  t 6 ok               finish        3.78s  'finished: Implemented main.go with a Task struct and an '
+  -> turns=6 finish=True tests_pass=True untouched=True coder_calls=1 coder_tokens=1660
+
+===== episode 5 =====
+  t 1 ok               list_dir      3.67s  'README.md\ngo.mod\nmain_test.go'
+  t 2 ok               read_file     1.48s  '   1| package main\n   2| \n   3| import (\n   4| \t"bytes"\n'
+  t 3 ok               read_file     7.32s  '   1| module task_api\n   2| \n   3| go 1.22'
+  t 4 ok               write_code   20.06s  'wrote main.go (3711 bytes) via the coder model'
+  t 5 ok               run_tests     2.75s  'exit=1\nFAIL\ttask_api [build failed]\nFAIL\n# task_api [tas'
+  t 6 ok               read_file     1.77s  '   1| package main\n   2| \n   3| import (\n   4| \t"encodin'
+  t 7 ok               write_code   19.00s  'wrote main.go (3182 bytes) via the coder model'
+  t 8 ok               run_tests     2.62s  'exit=0\nok  \ttask_api\t0.030s\n'
+  t 9 ok               finish        3.09s  'finished: Implemented a minimal in-memory REST task API '
+  -> turns=9 finish=True tests_pass=True untouched=True coder_calls=2 coder_tokens=12429
+
+=== SUMMARY ===
+{
+  "episodes": 5,
+  "solved": 5,
+  "turns_per_episode": [
+    5,
+    6,
+    5,
+    6,
+    9
+  ],
+  "total_turns": 31,
+  "malformed_turns": 0,
+  "malformed_breakdown": {},
+  "coder_calls_per_episode": [
+    1,
+    1,
+    1,
+    1,
+    2
+  ],
+  "coder_tokens_total": 23716,
+  "orchestrator_turn_latency_s": {
+    "min": 1.34,
+    "median": 2.91,
+    "max": 20.06
+  }
+}
+----- go/27b-solo done -----
+##################### rust / ensemble #####################
+
+===== episode 1 =====
+  t 1 ok               list_dir      1.02s  'Cargo.toml\nREADME.md\nsrc/\ntests/'
+  t 2 ok               read_file     0.45s  '   1| [package]\n   2| name = "task_api"\n   3| version = '
+  t 3 ok               list_dir      0.57s  'main.rs'
+  t 4 ok               read_file     0.45s  '   1| #[tokio::main]\n   2| async fn main() {\n   3|     l'
+  t 5 ok               list_dir      0.51s  'api.rs'
+  t 6 ok               read_file     0.44s  '   1| //! Specification for task_api. Do not modify.\n   '
+  t 7 ok               run_tests     1.35s  'exit=101\n    Updating crates.io index\n     Locking 62 pa'
+  t 8 ok               write_code    9.32s  'wrote src/lib.rs (3547 bytes) via the coder model'
+  t 9 ok               run_tests     0.43s  'exit=101\n:136:35\n    |\n136 |         .route("/tasks/{id}'
+  t10 ok               write_code    9.43s  'wrote src/lib.rs (3656 bytes) via the coder model'
+  t11 ok               run_tests     0.42s  'exit=101\n\nrunning 0 tests\n\ntest result: ok. 0 passed; 0 '
+  t12 ok               write_code    9.53s  'wrote src/lib.rs (3731 bytes) via the coder model'
+  t13 ok               run_tests     0.43s  'exit=0\n\nrunning 0 tests\n\ntest result: ok. 0 passed; 0 fa'
+  t14 ok               finish        1.90s  'finished: All tests pass. The `src/lib.rs` file was crea'
+  -> turns=14 finish=True tests_pass=True untouched=True coder_calls=3 coder_tokens=7193
+
+===== episode 2 =====
+  t 1 ok               list_dir      1.23s  'Cargo.toml\nREADME.md\nsrc/\ntests/'
+  t 2 ok               read_file     0.45s  '   1| [package]\n   2| name = "task_api"\n   3| version = '
+  t 3 ok               list_dir      0.56s  'main.rs'
+  t 4 ok               list_dir      0.45s  'api.rs'
+  t 5 ok               read_file     0.45s  '   1| //! Specification for task_api. Do not modify.\n   '
+  t 6 ok               read_file     1.46s  '   1| #[tokio::main]\n   2| async fn main() {\n   3|     l'
+  t 7 ok               run_tests     1.65s  'exit=101\n    Updating crates.io index\n     Locking 62 pa'
+  t 8 ok               write_code    7.80s  'wrote src/lib.rs (3165 bytes) via the coder model'
+  t 9 ok               run_tests     0.51s  'exit=101\ndler_fn` (in Nightly builds, run with -Z macro-'
+  t10 ok               write_code    8.30s  'wrote src/lib.rs (3182 bytes) via the coder model'
+  t11 ok               run_tests     0.44s  'exit=101\n   Compiling task_api v0.1.0 (/workspace/ens-wo'
+  t12 ok               write_code    8.13s  'wrote src/lib.rs (3132 bytes) via the coder model'
+  t13 ok               write_code    7.81s  'wrote src/lib.rs (3152 bytes) via the coder model'
+  t14 ok               run_tests     0.49s  'exit=101\n\nrunning 0 tests\n\ntest result: ok. 0 passed; 0 '
+  t15 ok               write_code    8.42s  'wrote src/lib.rs (3209 bytes) via the coder model'
+  t16 ok               run_tests     0.42s  'exit=0\n\nrunning 0 tests\n\ntest result: ok. 0 passed; 0 fa'
+  t17 ok               finish        2.15s  'finished: Successfully implemented the task_api library '
+  -> turns=17 finish=True tests_pass=True untouched=True coder_calls=5 coder_tokens=9861
+
+===== episode 3 =====
+  t 1 ok               read_file     1.43s  'error: no such file: test.py'
+  t 2 ok               list_dir      0.55s  'Cargo.toml\nREADME.md\nsrc/\ntests/'
+  t 3 ok               list_dir      0.46s  'main.rs'
+  t 4 ok               list_dir      0.46s  'api.rs'
+  t 5 ok               read_file     0.47s  '   1| //! Specification for task_api. Do not modify.\n   '
+  t 6 ok               read_file     1.58s  '   1| #[tokio::main]\n   2| async fn main() {\n   3|     l'
+  t 7 ok               read_file     0.51s  '   1| [package]\n   2| name = "task_api"\n   3| version = '
+  t 8 ok               list_dir      1.23s  'main.rs'
+  t 9 ok               run_tests     1.51s  'exit=101\n    Updating crates.io index\n     Locking 62 pa'
+  t10 ok               write_code    3.55s  'wrote src/lib.rs (3975 bytes) via the coder model'
+  t11 ok               run_tests     0.54s  'exit=101\n   Compiling proc-macro2 v1.0.107\n   Compiling '
+  t12 ok               read_file     1.18s  '   1| [package]\n   2| name = "task_api"\n   3| version = '
+  t13 ok               run_tests     0.67s  'exit=101\n   Compiling task_api v0.1.0 (/workspace/ens-wo'
+  t14 ok               read_file     0.89s  '   1| use axum::{\n   2|     extract::{Path, State},\n   3'
+  t15 ok               write_code    2.23s  'wrote Cargo.toml (228 bytes) via the coder model'
+  t16 ok               run_tests     0.49s  'exit=101\n    Updating crates.io index\n     Locking 5 pac'
+  t17 ok               write_code    3.56s  'wrote src/lib.rs (3666 bytes) via the coder model'
+  t18 ok               run_tests     0.51s  'exit=101\nf/axum-0.7.9/src/routing/mod.rs:195:5\n    |\n195'
+  t19 ok               read_file     1.41s  '   1| use axum::{\n   2|     extract::{Path, State},\n   3'
+  t20 ok               read_file     1.61s  '   1| [package]\n   2| name = "my_project"\n   3| version '
+  t21 ok               write_code    1.48s  'wrote Cargo.toml (209 bytes) via the coder model'
+  t22 ok               run_tests     0.49s  'exit=101\n   Compiling task_api v0.1.0 (/workspace/ens-wo'
+  t23 ok               write_code    1.63s  'wrote Cargo.toml (158 bytes) via the coder model'
+  t24 ok               run_tests     0.51s  'exit=101\n    Updating crates.io index\n     Locking 3 pac'
+  t25 ok               read_file     1.12s  '   1| [package]\n   2| name = "api_project"\n   3| version'
+  t26 ok               write_code    1.82s  'wrote Cargo.toml (372 bytes) via the coder model'
+  t27 ok               run_tests     0.51s  'exit=101\nid ... ok\n\nfailures:\n\n---- delete_then_get_retu'
+  t28 ok               run_tests    26.64s  'exit=101\n\nrunning 0 tests\n\ntest result: ok. 0 passed; 0 '
+  t29 ok               run_tests    20.18s  'exit=101\n\nrunning 0 tests\n\ntest result: ok. 0 passed; 0 '
+  t30 ok               write_code   11.11s  'wrote src/lib.rs (3255 bytes) via the coder model'
+  -> turns=30 finish=False tests_pass=False untouched=True coder_calls=7 coder_tokens=12994
+
+===== episode 4 =====
+  t 1 ok               list_dir      1.58s  'Cargo.toml\nREADME.md\nsrc/\ntests/'
+  t 2 ok               list_dir      0.80s  'main.rs'
+  t 3 ok               list_dir      0.45s  'api.rs'
+  t 4 ok               read_file     0.45s  '   1| #[tokio::main]\n   2| async fn main() {\n   3|     l'
+  t 5 ok               read_file     0.50s  '   1| //! Specification for task_api. Do not modify.\n   '
+  t 6 ok               read_file     1.44s  '   1| [package]\n   2| name = "task_api"\n   3| version = '
+  t 7 ok               write_code    9.68s  'wrote src/lib.rs (3680 bytes) via the coder model'
+  t 8 ok               run_tests     0.44s  'exit=101\n    |\n    | |                     required by a'
+  t 9 ok               write_code   15.48s  'wrote src/lib.rs (6536 bytes) via the coder model'
+  t10 ok               run_tests     0.44s  'exit=101\n/lib.rs:168:9\n    |\n167 |     match rx.recv().a'
+  t11 ok               write_code   15.28s  'wrote src/lib.rs (6467 bytes) via the coder model'
+  t12 ok               run_tests     0.44s  'exit=0\n\nrunning 0 tests\n\ntest result: ok. 0 passed; 0 fa'
+  t13 ok               write_code   14.96s  'wrote src/lib.rs (6327 bytes) via the coder model'
+  t14 ok               run_tests     0.44s  'exit=0\n\nrunning 0 tests\n\ntest result: ok. 0 passed; 0 fa'
+  t15 ok               finish        1.98s  'finished: Successfully implemented the task_api library '
+  -> turns=15 finish=True tests_pass=True untouched=True coder_calls=4 coder_tokens=11054
+
+===== episode 5 =====
+  t 1 ok               read_file     1.45s  'error: no such file: test_suite.py'
+  t 2 ok               list_dir      0.51s  'Cargo.toml\nREADME.md\nsrc/\ntests/'
+  t 3 ok               list_dir      0.55s  'api.rs'
+  t 4 ok               read_file     0.46s  '   1| //! Specification for task_api. Do not modify.\n   '
+  t 5 ok               read_file     1.59s  '   1| [package]\n   2| name = "task_api"\n   3| version = '
+  t 6 ok               list_dir      0.58s  'main.rs'
+  t 7 ok               read_file     0.46s  '   1| #[tokio::main]\n   2| async fn main() {\n   3|     l'
+  t 8 ok               run_tests     0.52s  'exit=101\n    Updating crates.io index\n     Locking 62 pa'
+  t 9 ok               read_file     0.82s  '   1| # task_api\n   2| \n   3| An in-memory task REST API'
+  t10 ok               write_code   11.24s  'wrote src/lib.rs (4017 bytes) via the coder model'
+  t11 ok               run_tests     0.53s  'exit=0\n\nrunning 0 tests\n\ntest result: ok. 0 passed; 0 fa'
+  t12 ok               finish        4.04s  'finished: Successfully implemented the task API in `src/'
+  -> turns=12 finish=True tests_pass=True untouched=True coder_calls=1 coder_tokens=2911
+
+=== SUMMARY ===
+{
+  "episodes": 5,
+  "solved": 4,
+  "turns_per_episode": [
+    14,
+    17,
+    30,
+    15,
+    12
+  ],
+  "total_turns": 88,
+  "malformed_turns": 0,
+  "malformed_breakdown": {},
+  "coder_calls_per_episode": [
+    3,
+    5,
+    7,
+    4,
+    1
+  ],
+  "coder_tokens_total": 44013,
+  "orchestrator_turn_latency_s": {
+    "min": 0.42,
+    "median": 0.89,
+    "max": 26.64
+  }
+}
+----- rust/ensemble done -----
+##################### rust / cn-solo #####################
+
+===== episode 1 =====
+  t 1 ok               list_dir      1.34s  'Cargo.toml\nREADME.md\nsrc/\ntests/'
+  t 2 ok               list_dir      0.45s  'main.rs'
+  t 3 ok               list_dir      0.44s  'api.rs'
+  t 4 ok               read_file     0.48s  '   1| //! Specification for task_api. Do not modify.\n   '
+  t 5 ok               read_file     1.46s  '   1| #[tokio::main]\n   2| async fn main() {\n   3|     l'
+  t 6 ok               read_file     0.52s  '   1| [package]\n   2| name = "task_api"\n   3| version = '
+  t 7 ok               list_dir      1.19s  'main.rs'
+  t 8 ok               run_tests     0.55s  'exit=101\n    Updating crates.io index\n     Locking 62 pa'
+  t 9 ok               write_code    8.76s  'wrote src/lib.rs (3672 bytes) via the coder model'
+  t10 ok               run_tests     0.79s  'exit=101\n   Compiling proc-macro2 v1.0.107\n   Compiling '
+  t11 ok               write_code    9.48s  'wrote src/lib.rs (3652 bytes) via the coder model'
+  t12 ok               run_tests     0.65s  'exit=101\n\nrunning 0 tests\n\ntest result: ok. 0 passed; 0 '
+  t13 ok               write_code   14.57s  'wrote src/lib.rs (3576 bytes) via the coder model'
+  t14 ok               run_tests     0.72s  'exit=101\nrun with -Z macro-backtrace for more info)\n\nerr'
+  t15 ok               write_code    9.52s  'wrote src/lib.rs (3645 bytes) via the coder model'
+  t16 ok               run_tests     0.72s  'exit=101\n errors\nwarning: build failed, waiting for othe'
+  t17 ok               write_code    9.70s  'wrote src/lib.rs (3678 bytes) via the coder model'
+  t18 ok               run_tests     0.76s  'exit=101\n                   --- ^^^^^^^^^^^ the trait `H'
+  t19 ok               write_code   10.51s  'wrote src/lib.rs (3794 bytes) via the coder model'
+  t20 ok               run_tests     0.71s  'exit=101\n\nrunning 0 tests\n\ntest result: ok. 0 passed; 0 '
+  t21 ok               write_code   15.68s  'wrote src/lib.rs (3812 bytes) via the coder model'
+  t22 ok               run_tests     0.87s  'exit=101\n\nrunning 0 tests\n\ntest result: ok. 0 passed; 0 '
+  t23 ok               write_code   10.35s  'wrote src/lib.rs (3921 bytes) via the coder model'
+  t24 ok               run_tests     0.74s  'exit=101\n\nrunning 0 tests\n\ntest result: ok. 0 passed; 0 '
+  t25 ok               run_tests     7.26s  'exit=101\n\nrunning 0 tests\n\ntest result: ok. 0 passed; 0 '
+  t26 ok               write_code   13.35s  'wrote src/lib.rs (3822 bytes) via the coder model'
+  t27 ok               run_tests     0.83s  'exit=101\n\nrunning 0 tests\n\ntest result: ok. 0 passed; 0 '
+  t28 ok               write_code   12.66s  'wrote src/lib.rs (4038 bytes) via the coder model'
+  t29 ok               run_tests     0.74s  'exit=101\n, post(create_task))\n    |                     '
+  t30 ok               write_code    9.79s  'wrote src/lib.rs (3686 bytes) via the coder model'
+  -> turns=30 finish=False tests_pass=False untouched=True coder_calls=11 coder_tokens=10618
+
+===== episode 2 =====
+  t 1 ok               read_file     1.23s  'error: no such file: test.py'
+  t 2 ok               list_dir      0.51s  'Cargo.toml\nREADME.md\nsrc/\ntests/'
+  t 3 ok               list_dir      0.55s  'api.rs'
+  t 4 ok               read_file     0.46s  '   1| //! Specification for task_api. Do not modify.\n   '
+  t 5 ok               read_file     1.58s  '   1| [package]\n   2| name = "task_api"\n   3| version = '
+  t 6 ok               list_dir      0.57s  'main.rs'
+  t 7 ok               read_file     0.46s  '   1| #[tokio::main]\n   2| async fn main() {\n   3|     l'
+  t 8 ok               list_dir      0.63s  'main.rs'
+  t 9 ok               run_tests     0.55s  'exit=101\n    Updating crates.io index\n     Locking 62 pa'
+  t10 ok               write_code   11.76s  'wrote src/lib.rs (4578 bytes) via the coder model'
+  t11 ok               run_tests     0.74s  'exit=101\n borrow is created here ...\n...\n128 | }\n    | -'
+  t12 ok               write_code   11.36s  'wrote src/lib.rs (4818 bytes) via the coder model'
+  t13 ok               run_tests     0.86s  'exit=101\n   Compiling task_api v0.1.0 (/workspace/ens-wo'
+  t14 ok               write_code   11.12s  'wrote src/lib.rs (4822 bytes) via the coder model'
+  t15 ok               run_tests     0.84s  'exit=101\n\nrunning 0 tests\n\ntest result: ok. 0 passed; 0 '
+  t16 ok               read_file     2.33s  '   1| //! Specification for task_api. Do not modify.\n   '
+  t17 ok               write_code   12.82s  'wrote src/lib.rs (4813 bytes) via the coder model'
+  t18 ok               run_tests     0.79s  'exit=0\n\nrunning 0 tests\n\ntest result: ok. 0 passed; 0 fa'
+  t19 ok               write_code   11.58s  'wrote src/lib.rs (4809 bytes) via the coder model'
+  t20 ok               run_tests     0.94s  'exit=0\n\nrunning 0 tests\n\ntest result: ok. 0 passed; 0 fa'
+  t21 ok               finish        2.37s  'finished: All 7 tests now pass successfully. The impleme'
+  -> turns=21 finish=True tests_pass=True untouched=True coder_calls=5 coder_tokens=5963
+
+===== episode 3 =====
+  t 1 ok               list_dir      1.39s  'Cargo.toml\nREADME.md\nsrc/\ntests/'
+  t 2 ok               list_dir      0.44s  'main.rs'
+  t 3 ok               list_dir      0.42s  'api.rs'
+  t 4 ok               read_file     0.45s  '   1| //! Specification for task_api. Do not modify.\n   '
+  t 5 ok               read_file     1.57s  '   1| [package]\n   2| name = "task_api"\n   3| version = '
+  t 6 ok               read_file     0.75s  '   1| #[tokio::main]\n   2| async fn main() {\n   3|     l'
+  t 7 ok               run_tests     0.50s  'exit=101\n    Updating crates.io index\n     Locking 62 pa'
+  t 8 ok               read_file     0.67s  '   1| # task_api\n   2| \n   3| An in-memory task REST API'
+  t 9 ok               write_code    9.38s  'wrote src/lib.rs (3381 bytes) via the coder model'
+  t10 ok               read_file     0.89s  '   1| use axum::{\n   2|     extract::Path,\n   3|     htt'
+  t11 ok               write_code    9.02s  'wrote src/lib.rs (3274 bytes) via the coder model'
+  t12 ok               run_tests     0.80s  'exit=0\n_missing_returns_404 ... ok\ntest create_returns_2'
+  t13 ok               write_code    8.95s  'wrote src/lib.rs (3362 bytes) via the coder model'
+  t14 ok               run_tests     0.90s  'exit=0\n\nrunning 0 tests\n\ntest result: ok. 0 passed; 0 fa'
+  t15 ok               finish        2.20s  'finished: Successfully implemented the task_api library!'
+  -> turns=15 finish=True tests_pass=True untouched=True coder_calls=3 coder_tokens=2636
+
+===== episode 4 =====
+  t 1 ok               read_file     1.19s  'error: no such file: test_suite.py'
+  t 2 ok               list_dir      0.58s  'Cargo.toml\nREADME.md\nsrc/\ntests/'
+  t 3 ok               list_dir      0.62s  'main.rs'
+  t 4 ok               list_dir      0.46s  'api.rs'
+  t 5 ok               read_file     0.44s  '   1| [package]\n   2| name = "task_api"\n   3| version = '
+  t 6 ok               read_file     0.59s  '   1| //! Specification for task_api. Do not modify.\n   '
+  t 7 ok               read_file     1.47s  '   1| #[tokio::main]\n   2| async fn main() {\n   3|     l'
+  t 8 ok               run_tests     0.43s  'exit=101\n    Updating crates.io index\n     Locking 62 pa'
+  t 9 ok               write_code    9.17s  'wrote src/lib.rs (3308 bytes) via the coder model'
+  t10 ok               run_tests     0.68s  'exit=101\n25]: cannot find value `TASKS` in this scope\n  '
+  t11 ok               write_code    8.25s  'wrote src/lib.rs (3180 bytes) via the coder model'
+  t12 ok               run_tests     0.69s  'exit=101\n   Compiling task_api v0.1.0 (/workspace/ens-wo'
+  t13 ok               write_code    2.39s  'wrote Cargo.toml (390 bytes) via the coder model'
+  t14 tool_error       run_tests     0.78s  "error: Command 'cargo test' timed out after 600 seconds"
+  t15 ok               write_code    9.18s  'wrote src/lib.rs (3796 bytes) via the coder model'
+  t16 ok               run_tests     0.76s  'exit=101\n\nrunning 0 tests\n\ntest result: ok. 0 passed; 0 '
+  t17 ok               write_code    8.49s  'wrote src/lib.rs (2855 bytes) via the coder model'
+  t18 ok               run_tests     0.71s  'exit=101\nby a bound in `MethodRouter::<S>::delete`\n   --'
+  t19 ok               write_code    7.59s  'wrote src/lib.rs (2953 bytes) via the coder model'
+  t20 ok               run_tests     0.72s  'exit=101\n   Compiling task_api v0.1.0 (/workspace/ens-wo'
+  t21 ok               write_code    7.49s  'wrote src/lib.rs (2920 bytes) via the coder model'
+  t22 ok               run_tests     0.80s  'exit=101\n   Compiling task_api v0.1.0 (/workspace/ens-wo'
+  t23 ok               write_code    7.65s  'wrote src/lib.rs (2935 bytes) via the coder model'
+  t24 ok               run_tests     0.71s  'exit=101\n   Compiling task_api v0.1.0 (/workspace/ens-wo'
+  t25 ok               write_code    7.82s  'wrote src/lib.rs (2950 bytes) via the coder model'
+  t26 ok               run_tests     0.71s  'exit=101\n are incorrect\n   |\n   = note: expected struct '
+  t27 ok               write_code    8.15s  'wrote src/lib.rs (2935 bytes) via the coder model'
+  t28 ok               run_tests     0.75s  'exit=101\n   Compiling task_api v0.1.0 (/workspace/ens-wo'
+  t29 ok               write_code   11.80s  'wrote src/lib.rs (3457 bytes) via the coder model'
+  t30 ok               run_tests     0.77s  'exit=101\n   Compiling task_api v0.1.0 (/workspace/ens-wo'
+  -> turns=30 finish=False tests_pass=False untouched=True coder_calls=11 coder_tokens=8078
+
+===== episode 5 =====
+  t 1 ok               read_file     1.53s  'error: no such file: test'
+  t 2 ok               list_dir      0.53s  'Cargo.toml\nREADME.md\nsrc/\ntests/'
+  t 3 ok               list_dir      0.96s  'main.rs'
+  t 4 ok               list_dir      0.46s  'api.rs'
+  t 5 ok               read_file     0.44s  '   1| //! Specification for task_api. Do not modify.\n   '
+  t 6 ok               read_file     1.56s  '   1| [package]\n   2| name = "task_api"\n   3| version = '
+  t 7 ok               read_file     0.71s  '   1| #[tokio::main]\n   2| async fn main() {\n   3|     l'
+  t 8 ok               run_tests     0.53s  'exit=101\n    Updating crates.io index\n     Locking 62 pa'
+  t 9 ok               write_code   10.40s  'wrote src/lib.rs (3762 bytes) via the coder model'
+  t10 ok               run_tests     0.82s  'exit=0\n\nrunning 0 tests\n\ntest result: ok. 0 passed; 0 fa'
+  t11 ok               run_tests     1.21s  'exit=0\n\nrunning 0 tests\n\ntest result: ok. 0 passed; 0 fa'
+  t12 ok               finish        3.12s  'finished: Successfully implemented the task_api library '
+  -> turns=12 finish=True tests_pass=True untouched=True coder_calls=1 coder_tokens=977
+
+=== SUMMARY ===
+{
+  "episodes": 5,
+  "solved": 3,
+  "turns_per_episode": [
+    30,
+    21,
+    15,
+    30,
+    12
+  ],
+  "total_turns": 108,
+  "malformed_turns": 1,
+  "malformed_breakdown": {
+    "tool_error": 1
+  },
+  "coder_calls_per_episode": [
+    11,
+    5,
+    3,
+    11,
+    1
+  ],
+  "coder_tokens_total": 28272,
+  "orchestrator_turn_latency_s": {
+    "min": 0.42,
+    "median": 0.86,
+    "max": 15.68
+  }
+}
+----- rust/cn-solo done -----
+##################### rust / 27b-solo #####################
+
+===== episode 1 =====
+  t 1 ok               list_dir      3.50s  'Cargo.toml\nREADME.md\nsrc/\ntests/'
+  t 2 ok               read_file     1.56s  '   1| [package]\n   2| name = "task_api"\n   3| version = '
+  t 3 ok               list_dir      1.57s  'api.rs'
+  t 4 ok               read_file     1.36s  '   1| //! Specification for task_api. Do not modify.\n   '
+  t 5 ok               list_dir      5.40s  'main.rs'
+  t 6 ok               read_file     5.21s  '   1| #[tokio::main]\n   2| async fn main() {\n   3|     l'
+  t 7 ok               write_code   14.78s  'wrote src/lib.rs (3369 bytes) via the coder model'
+  t 8 ok               run_tests     2.58s  'exit=101\n `AppState` with `#[derive(Clone)]`\n    |\n 32 +'
+  t 9 ok               read_file     2.21s  '   1| use axum::{\n   2|     extract::Path,\n   3|     ext'
+  t10 ok               write_code   11.45s  'wrote src/lib.rs (3338 bytes) via the coder model'
+  t11 ok               run_tests     2.14s  'exit=101\n\nrunning 0 tests\n\ntest result: ok. 0 passed; 0 '
+  t12 ok               read_file     2.01s  '   1| use axum::{\n   2|     extract::{Path, State},\n   3'
+  t13 ok               write_code   12.79s  'wrote src/lib.rs (3208 bytes) via the coder model'
+  t14 ok               run_tests     2.70s  'exit=0\n\nrunning 0 tests\n\ntest result: ok. 0 passed; 0 fa'
+  t15 ok               finish        3.34s  'finished: Implemented the in-memory task API in src/lib.'
+  -> turns=15 finish=True tests_pass=True untouched=True coder_calls=3 coder_tokens=12426
+
+===== episode 2 =====
+  t 1 ok               list_dir      3.12s  'Cargo.toml\nREADME.md\nsrc/\ntests/'
+  t 2 ok               list_dir      1.45s  'api.rs'
+  t 3 ok               read_file     1.38s  '   1| //! Specification for task_api. Do not modify.\n   '
+  t 4 ok               read_file     3.11s  '   1| [package]\n   2| name = "task_api"\n   3| version = '
+  t 5 ok               list_dir      4.28s  'main.rs'
+  t 6 ok               write_code   12.89s  'wrote src/lib.rs (3259 bytes) via the coder model'
+  t 7 ok               run_tests     2.25s  'exit=101\n   create_returns_201_and_id_1\n    delete_then_'
+  t 8 ok               read_file     2.43s  '   1| use axum::{\n   2|     extract::{Path, State},\n   3'
+  t 9 ok               write_code   31.67s  'wrote src/lib.rs (3377 bytes) via the coder model'
+  t10 ok               run_tests     2.49s  'exit=101\n   Compiling task_api v0.1.0 (/workspace/ens-wo'
+  t11 ok               write_code   58.18s  'wrote src/lib.rs (3172 bytes) via the coder model'
+  t12 ok               run_tests     2.77s  'exit=0\n\nrunning 0 tests\n\ntest result: ok. 0 passed; 0 fa'
+  t13 ok               read_file     2.43s  '   1| use axum::{\n   2|     Router,\n   3|     Json,\n   4'
+  t14 ok               write_code   33.44s  'wrote src/lib.rs (3172 bytes) via the coder model'
+  t15 ok               run_tests     3.43s  'exit=0\n\nrunning 0 tests\n\ntest result: ok. 0 passed; 0 fa'
+  t16 ok               finish        5.82s  'finished: Implemented the task_api in-memory REST API (s'
+  -> turns=16 finish=True tests_pass=True untouched=True coder_calls=4 coder_tokens=17425
+
+===== episode 3 =====
+  t 1 ok               list_dir      3.16s  'Cargo.toml\nREADME.md\nsrc/\ntests/'
+  t 2 ok               read_file     1.65s  '   1| [package]\n   2| name = "task_api"\n   3| version = '
+  t 3 ok               list_dir      1.47s  'api.rs'
+  t 4 ok               read_file     1.42s  '   1| //! Specification for task_api. Do not modify.\n   '
+  t 5 ok               list_dir      2.70s  'main.rs'
+  t 6 ok               write_code   16.96s  'wrote src/lib.rs (3074 bytes) via the coder model'
+  t 7 ok               run_tests     2.74s  'exit=0\n\nrunning 0 tests\n\ntest result: ok. 0 passed; 0 fa'
+  t 8 ok               finish        3.52s  'finished: Implemented src/lib.rs exposing app() -> axum:'
+  -> turns=8 finish=True tests_pass=True untouched=True coder_calls=1 coder_tokens=6381
+
+===== episode 4 =====
+  t 1 ok               list_dir      3.16s  'Cargo.toml\nREADME.md\nsrc/\ntests/'
+  t 2 ok               read_file     1.57s  '   1| [package]\n   2| name = "task_api"\n   3| version = '
+  t 3 ok               list_dir      1.49s  'api.rs'
+  t 4 ok               read_file     1.43s  '   1| //! Specification for task_api. Do not modify.\n   '
+  t 5 ok               list_dir      5.69s  'main.rs'
+  t 6 ok               write_code   17.03s  'wrote src/lib.rs (3077 bytes) via the coder model'
+  t 7 ok               run_tests     2.67s  'exit=101\n)).await;\n   |         ---- ^^^^^^^^^^^ expecte'
+  t 8 ok               write_code   19.83s  'wrote src/lib.rs (3322 bytes) via the coder model'
+  t 9 ok               run_tests     2.68s  'exit=101\n   Compiling task_api v0.1.0 (/workspace/ens-wo'
+  t10 ok               read_file     1.85s  '   1| use axum::{\n   2|     Extension, Json, Router,\n   '
+  t11 ok               write_code    4.65s  'wrote src/lib.rs (2261 bytes) via the coder model'
+  t12 ok               run_tests     1.97s  'exit=101\n   Compiling task_api v0.1.0 (/workspace/ens-wo'
+  t13 ok               read_file     1.29s  '   1| use std::collections::HashMap;\n   2| use std::sync'
+  t14 ok               write_code   34.93s  'wrote src/lib.rs (3326 bytes) via the coder model'
+  t15 ok               run_tests     3.21s  'exit=0\n\nrunning 0 tests\n\ntest result: ok. 0 passed; 0 fa'
+  t16 ok               finish        3.73s  'finished: Implemented src/lib.rs with an in-memory task '
+  -> turns=16 finish=True tests_pass=True untouched=True coder_calls=4 coder_tokens=14777
+
+===== episode 5 =====
+  t 1 ok               list_dir      2.72s  'Cargo.toml\nREADME.md\nsrc/\ntests/'
+  t 2 ok               list_dir      1.42s  'api.rs'
+  t 3 ok               read_file     1.45s  '   1| //! Specification for task_api. Do not modify.\n   '
+  t 4 ok               read_file     2.73s  '   1| [package]\n   2| name = "task_api"\n   3| version = '
+  t 5 ok               write_code   14.03s  'wrote src/lib.rs (3632 bytes) via the coder model'
+  t 6 ok               run_tests     2.19s  'exit=101\nted struct `Router<()>`\n              found str'
+  t 7 ok               write_code   14.89s  'wrote src/lib.rs (3214 bytes) via the coder model'
+  t 8 ok               run_tests     2.28s  'exit=101\nreate ... FAILED\ntest get_missing_returns_404 .'
+  t 9 ok               write_code   14.58s  'wrote src/lib.rs (3008 bytes) via the coder model'
+  t10 ok               run_tests     3.44s  'exit=101\n\nrunning 0 tests\n\ntest result: ok. 0 passed; 0 '
+  t11 ok               write_code  142.55s  'wrote src/lib.rs (6134 bytes) via the coder model'
+  t12 ok               run_tests     3.61s  'exit=101\n^^^^ the trait `Handler<_, _>` is not implement'
+  t13 ok               write_code   27.67s  'wrote src/lib.rs (4674 bytes) via the coder model'
+  t14 ok               run_tests     3.58s  'exit=101\n in `MethodRouter::<S>::put`\n   --> /root/.carg'
+  t15 ok               write_code   25.99s  'wrote src/lib.rs (5230 bytes) via the coder model'
+  t16 ok               run_tests     3.43s  'exit=101\n   Compiling task_api v0.1.0 (/workspace/ens-wo'
+  t17 ok               read_file     2.62s  '   1| use std::collections::HashMap;\n   2| use std::sync'
+  t18 ok               write_code   43.54s  'wrote src/lib.rs (5258 bytes) via the coder model'
+  t19 ok               run_tests     4.55s  'exit=101\n2)>\n              axum::middleware::FromFn<F, S'
+  t20 ok               write_code   47.30s  'wrote src/lib.rs (5162 bytes) via the coder model'
+  t21 ok               run_tests     4.73s  'exit=101\nu64>, Json<UpdateTaskRequest>) -> ... {update_t'
+  t22 ok               write_code   48.30s  'wrote src/lib.rs (4990 bytes) via the coder model'
+  t23 ok               run_tests    23.54s  'exit=101\n`fn(Request<Body>, Path<u64>, Json<...>) -> ...'
+  t24 ok               write_code   34.72s  'wrote src/lib.rs (4210 bytes) via the coder model'
+  t25 ok               run_tests     3.02s  'exit=101\n   --> src/lib.rs:120:33\n    |\n114 | /         '
+  t26 ok               write_code   30.26s  'wrote src/lib.rs (4206 bytes) via the coder model'
+  t27 ok               run_tests     6.09s  'exit=101\ntrait bound `{closure@lib.rs:108:17}: Handler<('
+  t28 no_tool_call     -            53.45s  ''
+  t29 ok               write_code   74.22s  'wrote src/lib.rs (5677 bytes) via the coder model'
+  t30 ok               run_tests     4.66s  'exit=101\nides `into_response` is implemented but not in '
+  -> turns=30 finish=False tests_pass=False untouched=True coder_calls=12 coder_tokens=53782
+
+=== SUMMARY ===
+{
+  "episodes": 5,
+  "solved": 4,
+  "turns_per_episode": [
+    15,
+    16,
+    8,
+    16,
+    30
+  ],
+  "total_turns": 85,
+  "malformed_turns": 1,
+  "malformed_breakdown": {
+    "no_tool_call": 1
+  },
+  "coder_calls_per_episode": [
+    3,
+    4,
+    1,
+    4,
+    12
+  ],
+  "coder_tokens_total": 104791,
+  "orchestrator_turn_latency_s": {
+    "min": 1.29,
+    "median": 3.43,
+    "max": 142.55
+  }
+}
+----- rust/27b-solo done -----
+##################### scala / ensemble #####################
+
+===== episode 1 =====
+  t 1 ok               list_dir      1.38s  'README.md\nmain.test.scala'
+  t 2 ok               read_file     0.45s  '   1| //> using scala 3.3.4\n   2| //> using dep org.http'
+  t 3 ok               list_dir      1.55s  'README.md\nmain.test.scala'
+  t 4 ok               write_code    7.70s  'wrote main.scala (2628 bytes) via the coder model'
+  t 5 ok               run_tests     0.52s  'exit=1\n\x1b[90mCompiling project (Scala 3.3.4, JVM (17))\x1b[0'
+  t 6 ok               write_code    7.52s  'wrote main.scala (2642 bytes) via the coder model'
+  t 7 ok               run_tests     0.43s  'exit=1\n                 ^^^^^\n[\x1b[31merror\x1b[0m] ./main.sc'
+  t 8 ok               write_code    7.01s  'wrote main.scala (2674 bytes) via the coder model'
+  t 9 ok               run_tests     0.42s  'exit=1\n\x1b[90mCompiling project (Scala 3.3.4, JVM (17))\x1b[0'
+  t10 ok               read_file     1.60s  '   1| # task_api\n   2| \n   3| An in-memory task REST API'
+  t11 ok               read_file     1.22s  '   1| //> using scala 3.3.4\n   2| //> using dep org.http'
+  t12 ok               write_code    7.72s  'wrote main.scala (2396 bytes) via the coder model'
+  t13 ok               run_tests     0.43s  'exit=1\nm)\x1b[0m\n\x1b[90m    at \x1b[0m\x1b[90mrethrow$extension @ f'
+  t14 ok               write_code    8.07s  'wrote main.scala (3462 bytes) via the coder model'
+  t15 ok               run_tests     0.46s  'exit=1\nquired: org.http4s.Response[cats.effect.IO]\n[\x1b[31'
+  t16 ok               read_file     1.53s  '   1| //> using scala 3.3.4\n   2| //> using dep org.http'
+  t17 ok               write_code    8.35s  'wrote main.scala (2804 bytes) via the coder model'
+  t18 ok               run_tests     0.47s  'exit=1\nm\x1b[31m.\x1b[0m\x1b[1m\x1b[31mIO\x1b[0m\x1b[1m\x1b[31m[\x1b[0morg.http4'
+  t19 ok               write_code    9.17s  'wrote main.scala (3322 bytes) via the coder model'
+  t20 ok               run_tests     0.43s  'exit=1\n\x1b[33mcase \x1b[0m_root_.scala.Predef.??? =>\n[\x1b[31mer'
+  t21 ok               write_code    8.51s  'wrote main.scala (3397 bytes) via the coder model'
+  t22 ok               run_tests     0.47s  'exit=1\n[cats.effect.IO]\n[\x1b[31merror\x1b[0m] ./main.scala:54'
+  t23 ok               write_code    9.29s  'wrote main.scala (3387 bytes) via the coder model'
+  t24 ok               run_tests     0.46s  'exit=1\n\x1b[90mCompiling project (Scala 3.3.4, JVM (17))\x1b[0'
+  t25 ok               read_file     1.32s  '   1| //> using scala 3.3.4\n   2| //> using dep org.http'
+  t26 ok               write_code   10.20s  'wrote main.scala (3574 bytes) via the coder model'
+  t27 ok               run_tests     0.47s  'exit=1\n\x1b[90mCompiling project (Scala 3.3.4, JVM (17))\x1b[0'
+  t28 ok               run_tests     1.17s  'exit=1\n\x1b[90mCompiling project (Scala 3.3.4, JVM (17))\x1b[0'
+  t29 ok               run_tests     1.07s  'exit=1\n\x1b[90mCompiling project (Scala 3.3.4, JVM (17))\x1b[0'
+  t30 ok               read_file     1.01s  '   1| //> using scala 3.3.4\n   2| //> using dep org.http'
+  -> turns=30 finish=False tests_pass=False untouched=True coder_calls=10 coder_tokens=24946
+
+===== episode 2 =====
+  t 1 ok               read_file     1.83s  'error: no such file: test'
+  t 2 ok               list_dir      0.41s  'README.md\nmain.test.scala'
+  t 3 ok               read_file     0.44s  '   1| //> using scala 3.3.4\n   2| //> using dep org.http'
+  t 4 ok               list_dir      1.38s  'README.md\nmain.test.scala'
+  t 5 ok               read_file     0.80s  '   1| # task_api\n   2| \n   3| An in-memory task REST API'
+  t 6 ok               run_tests     0.59s  'exit=1\nepl_3/3.8.4/scala3-repl_3-3.8.4.jar\nDownloaded ht'
+  t 7 ok               write_code    8.83s  'wrote main.scala (2789 bytes) via the coder model'
+  t 8 ok               run_tests     0.86s  'exit=1\n31merror\x1b[0m]       case DELETE -> Root / "tasks"'
+  t 9 ok               write_code    8.38s  'wrote main.scala (3142 bytes) via the coder model'
+  t10 ok               run_tests     0.43s  'exit=1\n[31merror\x1b[0m]                                   '
+  t11 ok               write_code    8.90s  'wrote main.scala (3585 bytes) via the coder model'
+  t12 ok               run_tests     0.44s  'exit=1\n                    ^\n[\x1b[31merror\x1b[0m] ./main.sca'
+  t13 ok               write_code    9.24s  'wrote main.scala (3586 bytes) via the coder model'
+  t14 ok               run_tests     0.44s  'exit=1\n33mvalue\x1b[0m \x1b[35mNotFound\x1b[0m in \x1b[33mobject\x1b[0m'
+  t15 ok               write_code    8.83s  'wrote main.scala (3330 bytes) via the coder model'
+  t16 ok               run_tests     0.44s  'exit=1\n\x1b[90mCompiling project (Scala 3.3.4, JVM (17))\x1b[0'
+  t17 ok               run_tests     1.42s  'exit=1\n\x1b[90mCompiling project (Scala 3.3.4, JVM (17))\x1b[0'
+  t18 ok               read_file     1.20s  '   1| //> using scala 3.3.4\n   2| //> using dep org.http'
+  t19 ok               write_code    9.76s  'wrote main.scala (3323 bytes) via the coder model'
+  t20 ok               run_tests     0.45s  'exit=1\n\x1b[90mCompiling project (Scala 3.3.4, JVM (17))\x1b[0'
+  t21 ok               write_code    9.21s  'wrote main.scala (3330 bytes) via the coder model'
+  t22 ok               run_tests     0.94s  'exit=1\n\x1b[90mCompiling project (Scala 3.3.4, JVM (17))\x1b[0'
+  t23 ok               write_code    8.18s  'wrote main.scala (3277 bytes) via the coder model'
+  t24 ok               run_tests     0.46s  'exit=1\n\x1b[90mCompiling project (Scala 3.3.4, JVM (17))\x1b[0'
+  t25 ok               read_file     1.32s  '   1| //> using scala 3.3.4\n   2| //> using dep org.http'
+  t26 ok               write_code   10.69s  'wrote main.scala (3351 bytes) via the coder model'
+  t27 ok               run_tests     0.46s  'exit=1\n\x1b[90mCompiling project (Scala 3.3.4, JVM (17))\x1b[0'
+  t28 ok               write_code    9.55s  'wrote main.scala (3289 bytes) via the coder model'
+  t29 ok               run_tests     0.48s  'exit=1\n\x1b[90mCompiling project (Scala 3.3.4, JVM (17))\x1b[0'
+  t30 ok               write_code    9.27s  'wrote main.scala (3416 bytes) via the coder model'
+  -> turns=30 finish=False tests_pass=False untouched=True coder_calls=11 coder_tokens=24510
+
+===== episode 3 =====
+ensemble_run.sh: line 20: 104933 Killed                  python3 "$S" --base-url "http://127.0.0.1:$base" --coder-url "http://127.0.0.1:$coder" --task-dir "$REPO/bench/tasks/$task/project" --work-root "/workspace/ens-work/$lang-$cfg" --test-cmd "$test_cmd" --test-file "$test_file" --episodes "$EP" --max-turns 30 --temperature "$otemp" --top-p 0.95 --top-k "$otopk" --coder-temperature 0.6 --coder-top-k 20 --out "$RES/$lang-$cfg.json"
+----- scala/ensemble done -----
+##################### scala / cn-solo #####################
+
+===== episode 1 =====

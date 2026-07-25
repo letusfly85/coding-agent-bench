@@ -1,0 +1,472 @@
+{
+  "summary": {
+    "episodes": 5,
+    "solved": 5,
+    "turns_per_episode": [
+      8,
+      8,
+      9,
+      7,
+      9
+    ],
+    "total_turns": 41,
+    "malformed_turns": 0,
+    "malformed_breakdown": {},
+    "coder_calls_per_episode": [
+      2,
+      1,
+      1,
+      1,
+      1
+    ],
+    "coder_tokens_total": 6319,
+    "orchestrator_turn_latency_s": {
+      "min": 0.43,
+      "median": 0.99,
+      "max": 38.44
+    }
+  },
+  "episodes": [
+    {
+      "turns": [
+        {
+          "turn": 1,
+          "secs": 1.01,
+          "n_calls": 1,
+          "completion_tokens": 22,
+          "tool": "read_file",
+          "status": "ok",
+          "result_head": "error: no such file: test.py"
+        },
+        {
+          "turn": 2,
+          "secs": 0.5,
+          "n_calls": 1,
+          "completion_tokens": 31,
+          "tool": "list_dir",
+          "status": "ok",
+          "result_head": "README.md\ngo.mod\nmain_test.go"
+        },
+        {
+          "turn": 3,
+          "secs": 0.51,
+          "n_calls": 1,
+          "completion_tokens": 31,
+          "tool": "read_file",
+          "status": "ok",
+          "result_head": "   1| package main\n   2| \n   3| import (\n   4| \t\"bytes\"\n   5| \t\"encoding/json\"\n   6| \t\"net/http\"\n   7| \t\"net/h"
+        },
+        {
+          "turn": 4,
+          "secs": 12.07,
+          "n_calls": 1,
+          "completion_tokens": 1276,
+          "tool": "write_code",
+          "status": "ok",
+          "coder_secs": 10.08,
+          "coder_tokens": 1061,
+          "result_head": "wrote main.go (3923 bytes) via the coder model"
+        },
+        {
+          "turn": 5,
+          "secs": 0.81,
+          "n_calls": 1,
+          "completion_tokens": 27,
+          "tool": "run_tests",
+          "status": "ok",
+          "result_head": "exit=1\n--- FAIL: TestGetAfterCreate (0.00s)\n    main_test.go:69: title: want \"get me\", got \"first\"\n--- FAIL: T"
+        },
+        {
+          "turn": 6,
+          "secs": 38.44,
+          "n_calls": 1,
+          "completion_tokens": 4447,
+          "tool": "write_code",
+          "status": "ok",
+          "coder_secs": 10.75,
+          "coder_tokens": 1119,
+          "result_head": "wrote main.go (4145 bytes) via the coder model"
+        },
+        {
+          "turn": 7,
+          "secs": 0.69,
+          "n_calls": 1,
+          "completion_tokens": 13,
+          "tool": "run_tests",
+          "status": "ok",
+          "result_head": "exit=0\nok  \ttask_api\t0.031s\n"
+        },
+        {
+          "turn": 8,
+          "secs": 1.33,
+          "n_calls": 1,
+          "completion_tokens": 124,
+          "tool": "finish",
+          "status": "ok",
+          "result_head": "finished: The implementation was missing. I created main.go with a task API that includes:\n- Task struct with "
+        }
+      ],
+      "n_turns": 8,
+      "called_finish": true,
+      "tests_pass": true,
+      "test_file_untouched": true,
+      "tool_errors": 0,
+      "coder_calls": 2,
+      "coder_tokens": 2180,
+      "episode": 1
+    },
+    {
+      "turns": [
+        {
+          "turn": 1,
+          "secs": 1.2,
+          "n_calls": 1,
+          "completion_tokens": 37,
+          "tool": "read_file",
+          "status": "ok",
+          "result_head": "error: no such file: test"
+        },
+        {
+          "turn": 2,
+          "secs": 0.5,
+          "n_calls": 1,
+          "completion_tokens": 32,
+          "tool": "list_dir",
+          "status": "ok",
+          "result_head": "README.md\ngo.mod\nmain_test.go"
+        },
+        {
+          "turn": 3,
+          "secs": 0.55,
+          "n_calls": 1,
+          "completion_tokens": 36,
+          "tool": "read_file",
+          "status": "ok",
+          "result_head": "   1| package main\n   2| \n   3| import (\n   4| \t\"bytes\"\n   5| \t\"encoding/json\"\n   6| \t\"net/http\"\n   7| \t\"net/h"
+        },
+        {
+          "turn": 4,
+          "secs": 1.65,
+          "n_calls": 1,
+          "completion_tokens": 36,
+          "tool": "list_dir",
+          "status": "ok",
+          "result_head": "README.md\ngo.mod\nmain_test.go"
+        },
+        {
+          "turn": 5,
+          "secs": 0.56,
+          "n_calls": 1,
+          "completion_tokens": 36,
+          "tool": "read_file",
+          "status": "ok",
+          "result_head": "   1| module task_api\n   2| \n   3| go 1.22"
+        },
+        {
+          "turn": 6,
+          "secs": 10.09,
+          "n_calls": 1,
+          "completion_tokens": 1171,
+          "tool": "write_code",
+          "status": "ok",
+          "coder_secs": 9.2,
+          "coder_tokens": 973,
+          "result_head": "wrote main.go (3327 bytes) via the coder model"
+        },
+        {
+          "turn": 7,
+          "secs": 0.84,
+          "n_calls": 1,
+          "completion_tokens": 27,
+          "tool": "run_tests",
+          "status": "ok",
+          "result_head": "exit=0\nok  \ttask_api\t0.030s\n"
+        },
+        {
+          "turn": 8,
+          "secs": 2.07,
+          "n_calls": 1,
+          "completion_tokens": 213,
+          "tool": "finish",
+          "status": "ok",
+          "result_head": "finished: Successfully implemented the task API in main.go. The implementation includes:\n- A Task struct with "
+        }
+      ],
+      "n_turns": 8,
+      "called_finish": true,
+      "tests_pass": true,
+      "test_file_untouched": true,
+      "tool_errors": 0,
+      "coder_calls": 1,
+      "coder_tokens": 973,
+      "episode": 2
+    },
+    {
+      "turns": [
+        {
+          "turn": 1,
+          "secs": 1.14,
+          "n_calls": 1,
+          "completion_tokens": 38,
+          "tool": "read_file",
+          "status": "ok",
+          "result_head": "error: no such file: test.py"
+        },
+        {
+          "turn": 2,
+          "secs": 0.5,
+          "n_calls": 1,
+          "completion_tokens": 31,
+          "tool": "list_dir",
+          "status": "ok",
+          "result_head": "README.md\ngo.mod\nmain_test.go"
+        },
+        {
+          "turn": 3,
+          "secs": 0.63,
+          "n_calls": 1,
+          "completion_tokens": 45,
+          "tool": "read_file",
+          "status": "ok",
+          "result_head": "   1| package main\n   2| \n   3| import (\n   4| \t\"bytes\"\n   5| \t\"encoding/json\"\n   6| \t\"net/http\"\n   7| \t\"net/h"
+        },
+        {
+          "turn": 4,
+          "secs": 1.67,
+          "n_calls": 1,
+          "completion_tokens": 37,
+          "tool": "read_file",
+          "status": "ok",
+          "result_head": "   1| # task_api\n   2| \n   3| An in-memory task REST API.\n   4| \n   5| `main_test.go` is the specification. Do"
+        },
+        {
+          "turn": 5,
+          "secs": 0.64,
+          "n_calls": 1,
+          "completion_tokens": 22,
+          "tool": "read_file",
+          "status": "ok",
+          "result_head": "   1| module task_api\n   2| \n   3| go 1.22"
+        },
+        {
+          "turn": 6,
+          "secs": 11.07,
+          "n_calls": 1,
+          "completion_tokens": 1280,
+          "tool": "write_code",
+          "status": "ok",
+          "coder_secs": 10.96,
+          "coder_tokens": 1165,
+          "result_head": "wrote main.go (4214 bytes) via the coder model"
+        },
+        {
+          "turn": 7,
+          "secs": 0.78,
+          "n_calls": 1,
+          "completion_tokens": 27,
+          "tool": "run_tests",
+          "status": "ok",
+          "result_head": "exit=0\nok  \ttask_api\t0.030s\n"
+        },
+        {
+          "turn": 8,
+          "secs": 0.52,
+          "n_calls": 1,
+          "completion_tokens": 31,
+          "tool": "run_tests",
+          "status": "ok",
+          "result_head": "exit=0\nok  \ttask_api\t(cached)\n"
+        },
+        {
+          "turn": 9,
+          "secs": 2.32,
+          "n_calls": 1,
+          "completion_tokens": 244,
+          "tool": "finish",
+          "status": "ok",
+          "result_head": "finished: I've implemented the task API in main.go that satisfies all the test requirements. The implementatio"
+        }
+      ],
+      "n_turns": 9,
+      "called_finish": true,
+      "tests_pass": true,
+      "test_file_untouched": true,
+      "tool_errors": 0,
+      "coder_calls": 1,
+      "coder_tokens": 1165,
+      "episode": 3
+    },
+    {
+      "turns": [
+        {
+          "turn": 1,
+          "secs": 0.99,
+          "n_calls": 1,
+          "completion_tokens": 20,
+          "tool": "list_dir",
+          "status": "ok",
+          "result_head": "README.md\ngo.mod\nmain_test.go"
+        },
+        {
+          "turn": 2,
+          "secs": 0.44,
+          "n_calls": 1,
+          "completion_tokens": 23,
+          "tool": "read_file",
+          "status": "ok",
+          "result_head": "   1| package main\n   2| \n   3| import (\n   4| \t\"bytes\"\n   5| \t\"encoding/json\"\n   6| \t\"net/http\"\n   7| \t\"net/h"
+        },
+        {
+          "turn": 3,
+          "secs": 1.53,
+          "n_calls": 1,
+          "completion_tokens": 22,
+          "tool": "read_file",
+          "status": "ok",
+          "result_head": "   1| module task_api\n   2| \n   3| go 1.22"
+        },
+        {
+          "turn": 4,
+          "secs": 0.43,
+          "n_calls": 1,
+          "completion_tokens": 22,
+          "tool": "read_file",
+          "status": "ok",
+          "result_head": "   1| # task_api\n   2| \n   3| An in-memory task REST API.\n   4| \n   5| `main_test.go` is the specification. Do"
+        },
+        {
+          "turn": 5,
+          "secs": 10.52,
+          "n_calls": 1,
+          "completion_tokens": 1198,
+          "tool": "write_code",
+          "status": "ok",
+          "coder_secs": 10.87,
+          "coder_tokens": 1162,
+          "result_head": "wrote main.go (4289 bytes) via the coder model"
+        },
+        {
+          "turn": 6,
+          "secs": 0.67,
+          "n_calls": 1,
+          "completion_tokens": 13,
+          "tool": "run_tests",
+          "status": "ok",
+          "result_head": "exit=0\nok  \ttask_api\t0.034s\n"
+        },
+        {
+          "turn": 7,
+          "secs": 1.38,
+          "n_calls": 1,
+          "completion_tokens": 131,
+          "tool": "finish",
+          "status": "ok",
+          "result_head": "finished: All tests pass. Implemented a complete in-memory task REST API with:\n- `Task` struct with JSON tags "
+        }
+      ],
+      "n_turns": 7,
+      "called_finish": true,
+      "tests_pass": true,
+      "test_file_untouched": true,
+      "tool_errors": 0,
+      "coder_calls": 1,
+      "coder_tokens": 1162,
+      "episode": 4
+    },
+    {
+      "turns": [
+        {
+          "turn": 1,
+          "secs": 1.11,
+          "n_calls": 1,
+          "completion_tokens": 38,
+          "tool": "read_file",
+          "status": "ok",
+          "result_head": "error: no such file: test.py"
+        },
+        {
+          "turn": 2,
+          "secs": 0.5,
+          "n_calls": 1,
+          "completion_tokens": 31,
+          "tool": "list_dir",
+          "status": "ok",
+          "result_head": "README.md\ngo.mod\nmain_test.go"
+        },
+        {
+          "turn": 3,
+          "secs": 0.57,
+          "n_calls": 1,
+          "completion_tokens": 36,
+          "tool": "read_file",
+          "status": "ok",
+          "result_head": "   1| package main\n   2| \n   3| import (\n   4| \t\"bytes\"\n   5| \t\"encoding/json\"\n   6| \t\"net/http\"\n   7| \t\"net/h"
+        },
+        {
+          "turn": 4,
+          "secs": 1.68,
+          "n_calls": 1,
+          "completion_tokens": 38,
+          "tool": "read_file",
+          "status": "ok",
+          "result_head": "   1| module task_api\n   2| \n   3| go 1.22"
+        },
+        {
+          "turn": 5,
+          "secs": 0.44,
+          "n_calls": 1,
+          "completion_tokens": 20,
+          "tool": "list_dir",
+          "status": "ok",
+          "result_head": "README.md\ngo.mod\nmain_test.go"
+        },
+        {
+          "turn": 6,
+          "secs": 1.37,
+          "n_calls": 1,
+          "completion_tokens": 131,
+          "tool": "run_tests",
+          "status": "ok",
+          "result_head": "exit=1\nFAIL\ttask_api [build failed]\nFAIL\n# task_api [task_api.test]\n./main_test.go:29:13: undefined: App\n./mai"
+        },
+        {
+          "turn": 7,
+          "secs": 8.16,
+          "n_calls": 1,
+          "completion_tokens": 928,
+          "tool": "write_code",
+          "status": "ok",
+          "coder_secs": 8.02,
+          "coder_tokens": 839,
+          "result_head": "wrote main.go (3039 bytes) via the coder model"
+        },
+        {
+          "turn": 8,
+          "secs": 0.78,
+          "n_calls": 1,
+          "completion_tokens": 26,
+          "tool": "run_tests",
+          "status": "ok",
+          "result_head": "exit=0\nok  \ttask_api\t0.028s\n"
+        },
+        {
+          "turn": 9,
+          "secs": 1.9,
+          "n_calls": 1,
+          "completion_tokens": 193,
+          "tool": "finish",
+          "status": "ok",
+          "result_head": "finished: The tests are now passing. I implemented the task API in main.go with:\n- A Task struct with ID, Titl"
+        }
+      ],
+      "n_turns": 9,
+      "called_finish": true,
+      "tests_pass": true,
+      "test_file_untouched": true,
+      "tool_errors": 0,
+      "coder_calls": 1,
+      "coder_tokens": 839,
+      "episode": 5
+    }
+  ]
+}
