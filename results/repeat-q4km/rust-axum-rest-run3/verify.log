@@ -1,0 +1,79 @@
+=== cargo build ===
+   Compiling futures-util v0.3.33
+   Compiling mime v0.3.17
+   Compiling memchr v2.8.3
+   Compiling ryu v1.0.23
+   Compiling matchit v0.8.4
+   Compiling form_urlencoded v1.2.2
+   Compiling tracing v0.1.44
+   Compiling http v1.4.2
+   Compiling syn v2.0.119
+   Compiling syn v3.0.3
+   Compiling errno v0.3.14
+   Compiling socket2 v0.6.5
+   Compiling mio v1.2.2
+   Compiling signal-hook-registry v1.4.8
+   Compiling http-body v1.1.0
+   Compiling parking_lot v0.12.5
+   Compiling http-body-util v0.1.4
+   Compiling axum-core v0.5.6
+   Compiling serde_path_to_error v0.1.20
+   Compiling serde_derive v1.0.229
+   Compiling tokio-macros v2.7.1
+   Compiling tokio v1.53.1
+   Compiling serde_urlencoded v0.7.1
+   Compiling hyper v1.11.0
+   Compiling tower v0.5.3
+   Compiling hyper-util v0.1.20
+   Compiling axum v0.8.9
+   Compiling task_api v0.1.0 (/workspace/results/repeat-q4km/rust-axum-rest-run3/project)
+warning: unused imports: `Method`, `Request`, `delete`, `post`, and `put`
+ --> src/main.rs:3:12
+  |
+3 |     http::{Method, Request, StatusCode},
+  |            ^^^^^^  ^^^^^^^
+4 |     routing::{delete, get, post, put},
+  |               ^^^^^^       ^^^^  ^^^
+  |
+  = note: `#[warn(unused_imports)]` (part of `#[warn(unused)]`) on by default
+
+warning: `task_api` (bin "task_api") generated 1 warning (run `cargo fix --bin "task_api" -p task_api` to apply 1 suggestion)
+    Finished `dev` profile [unoptimized + debuginfo] target(s) in 7.25s
+=== cargo test ===
+   Compiling task_api v0.1.0 (/workspace/results/repeat-q4km/rust-axum-rest-run3/project)
+warning: unused imports: `Method`, `Request`, `delete`, `post`, and `put`
+ --> src/main.rs:3:12
+  |
+3 |     http::{Method, Request, StatusCode},
+  |            ^^^^^^  ^^^^^^^
+4 |     routing::{delete, get, post, put},
+  |               ^^^^^^       ^^^^  ^^^
+  |
+  = note: `#[warn(unused_imports)]` (part of `#[warn(unused)]`) on by default
+
+error[E0521]: borrowed data escapes outside of function
+   --> src/main.rs:141:19
+    |
+132 |         body: Option<&str>,
+    |         ----         - let's call the lifetime of this reference `'1`
+    |         |
+    |         `body` is a reference that is only valid in the function body
+...
+141 |             .body(Body::from(body.unwrap_or("")))
+    |                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    |                   |
+    |                   `body` escapes the function body here
+    |                   argument requires that `'1` must outlive `'static`
+
+warning: unused variable: `body`
+   --> src/main.rs:137:21
+    |
+137 |         if let Some(body) = body {
+    |                     ^^^^ help: if this is intentional, prefix it with an underscore: `_body`
+    |
+    = note: `#[warn(unused_variables)]` (part of `#[warn(unused)]`) on by default
+
+For more information about this error, try `rustc --explain E0521`.
+warning: `task_api` (bin "task_api" test) generated 2 warnings
+error: could not compile `task_api` (bin "task_api" test) due to 1 previous error; 2 warnings emitted
+VERDICT build=pass test=fail

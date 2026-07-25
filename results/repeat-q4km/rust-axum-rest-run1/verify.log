@@ -1,0 +1,83 @@
+=== cargo build ===
+   Compiling form_urlencoded v1.2.2
+   Compiling ryu v1.0.23
+   Compiling memchr v2.8.3
+   Compiling matchit v0.8.4
+   Compiling http v1.4.2
+   Compiling tracing v0.1.44
+   Compiling syn v2.0.119
+   Compiling syn v3.0.3
+   Compiling errno v0.3.14
+   Compiling mio v1.2.2
+   Compiling socket2 v0.6.5
+   Compiling signal-hook-registry v1.4.8
+   Compiling http-body v1.1.0
+   Compiling parking_lot v0.12.5
+   Compiling http-body-util v0.1.4
+   Compiling axum-core v0.5.6
+   Compiling serde_path_to_error v0.1.20
+   Compiling serde_derive v1.0.229
+   Compiling tokio-macros v2.7.1
+   Compiling tokio v1.53.1
+   Compiling serde_urlencoded v0.7.1
+   Compiling hyper v1.11.0
+   Compiling tower v0.5.3
+   Compiling hyper-util v0.1.20
+   Compiling axum v0.8.9
+   Compiling task_api v0.1.0 (/workspace/results/repeat-q4km/rust-axum-rest-run1/project)
+warning: unused imports: `body::Body`, `delete`, `http::Request`, `post`, and `put`
+ --> src/main.rs:4:15
+  |
+4 |     routing::{delete, get, post, put},
+  |               ^^^^^^       ^^^^  ^^^
+5 |     body::Body,
+  |     ^^^^^^^^^^
+6 |     http::Request,
+  |     ^^^^^^^^^^^^^
+  |
+  = note: `#[warn(unused_imports)]` (part of `#[warn(unused)]`) on by default
+
+warning: `task_api` (bin "task_api") generated 1 warning (run `cargo fix --bin "task_api" -p task_api` to apply 1 suggestion)
+    Finished `dev` profile [unoptimized + debuginfo] target(s) in 7.29s
+=== cargo test ===
+error[E0277]: the trait bound `CreateTaskRequest: serde::Serialize` is not satisfied
+    --> src/main.rs:209:42
+     |
+ 209 |           let body = serde_json::to_string(&CreateTaskRequest {
+     |  ____________________---------------------_^
+     | |                    |
+     | |                    required by a bound introduced by this call
+ 210 | |             title: "To delete".to_string(),
+ 211 | |         })
+     | |_________^ unsatisfied trait bound
+     |
+help: the trait `Serialize` is not implemented for `CreateTaskRequest`
+    --> src/main.rs:23:1
+     |
+  23 | struct CreateTaskRequest {
+     | ^^^^^^^^^^^^^^^^^^^^^^^^
+     = note: for local types consider adding `#[derive(serde::Serialize)]` to your `CreateTaskRequest` type
+     = note: for types from other crates check whether the crate offers a `serde` feature flag
+     = help: the following other types implement trait `Serialize`:
+               &'a T
+               &'a mut T
+               ()
+               (T,)
+               (T0, T1)
+               (T0, T1, T2)
+               (T0, T1, T2, T3)
+               (T0, T1, T2, T3, T4)
+             and 131 others
+note: required by a bound in `serde_json::to_string`
+    --> /root/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/serde_json-1.0.151/src/ser.rs:2247:17
+     |
+2245 | pub fn to_string<T>(value: &T) -> Result<String>
+     |        --------- required by a bound in this function
+2246 | where
+2247 |     T: ?Sized + Serialize,
+     |                 ^^^^^^^^^ required by this bound in `to_string`
+
+For more information about this error, try `rustc --explain E0277`.
+warning: `task_api` (bin "task_api" test) generated 1 warning
+error: could not compile `task_api` (bin "task_api" test) due to 3 previous errors; 1 warning emitted
+VERDICT build=pass test=fail

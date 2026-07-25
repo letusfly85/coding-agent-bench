@@ -1,0 +1,67 @@
+=== cargo build ===
+   Compiling sync_wrapper v1.0.2
+   Compiling serde_json v1.0.151
+   Compiling futures-util v0.3.33
+   Compiling form_urlencoded v1.2.2
+   Compiling ryu v1.0.23
+   Compiling mime v0.3.17
+   Compiling memchr v2.8.3
+   Compiling matchit v0.8.4
+   Compiling http v1.4.2
+   Compiling tracing v0.1.44
+   Compiling syn v2.0.119
+   Compiling syn v3.0.3
+   Compiling errno v0.3.14
+   Compiling socket2 v0.6.5
+   Compiling mio v1.2.2
+   Compiling http-body v1.1.0
+   Compiling signal-hook-registry v1.4.8
+   Compiling http-body-util v0.1.4
+   Compiling parking_lot v0.12.5
+   Compiling axum-core v0.5.6
+   Compiling serde_path_to_error v0.1.20
+   Compiling serde_derive v1.0.229
+   Compiling tokio-macros v2.7.1
+   Compiling tokio v1.53.1
+   Compiling serde_urlencoded v0.7.1
+   Compiling hyper v1.11.0
+   Compiling tower v0.5.3
+   Compiling hyper-util v0.1.20
+   Compiling axum v0.8.9
+   Compiling task_api v0.1.0 (/workspace/results/repeat-q4km/rust-axum-rest-run4/project)
+warning: unused imports: `delete`, `post`, and `put`
+ --> src/main.rs:4:20
+  |
+4 |     routing::{get, post, put, delete},
+  |                    ^^^^  ^^^  ^^^^^^
+  |
+  = note: `#[warn(unused_imports)]` (part of `#[warn(unused)]`) on by default
+
+warning: `task_api` (bin "task_api") generated 1 warning (run `cargo fix --bin "task_api" -p task_api` to apply 1 suggestion)
+    Finished `dev` profile [unoptimized + debuginfo] target(s) in 7.33s
+=== cargo test ===
+   Compiling task_api v0.1.0 (/workspace/results/repeat-q4km/rust-axum-rest-run4/project)
+warning: unused imports: `delete`, `post`, and `put`
+ --> src/main.rs:4:20
+  |
+4 |     routing::{get, post, put, delete},
+  |                    ^^^^  ^^^  ^^^^^^
+  |
+  = note: `#[warn(unused_imports)]` (part of `#[warn(unused)]`) on by default
+
+error[E0599]: no method named `status` found for struct `Router<S>` in the current scope
+   --> src/main.rs:133:27
+    |
+133 |         let status = resp.status();
+    |                           ^^^^^^ method not found in `Router`
+
+error[E0599]: no method named `into_body` found for struct `Router<S>` in the current scope
+   --> src/main.rs:134:31
+    |
+134 |         let body_bytes = resp.into_body().collect().await.unwrap().to_bytes();
+    |                               ^^^^^^^^^ method not found in `Router`
+
+For more information about this error, try `rustc --explain E0599`.
+warning: `task_api` (bin "task_api" test) generated 1 warning
+error: could not compile `task_api` (bin "task_api" test) due to 2 previous errors; 1 warning emitted
+VERDICT build=pass test=fail

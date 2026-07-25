@@ -1,0 +1,70 @@
+=== cargo build ===
+   Compiling tower-layer v0.3.3
+   Compiling futures-task v0.3.33
+   Compiling form_urlencoded v1.2.2
+   Compiling memchr v2.8.3
+   Compiling mime v0.3.17
+   Compiling ryu v1.0.23
+   Compiling futures-util v0.3.33
+   Compiling matchit v0.8.4
+   Compiling http v1.4.2
+   Compiling tracing v0.1.44
+   Compiling syn v2.0.119
+   Compiling syn v3.0.3
+   Compiling errno v0.3.14
+   Compiling mio v1.2.2
+   Compiling socket2 v0.6.5
+   Compiling signal-hook-registry v1.4.8
+   Compiling http-body v1.1.0
+   Compiling http-body-util v0.1.4
+   Compiling parking_lot v0.12.5
+   Compiling axum-core v0.5.6
+   Compiling serde_path_to_error v0.1.20
+   Compiling serde_derive v1.0.229
+   Compiling tokio-macros v2.7.1
+   Compiling tokio v1.53.1
+   Compiling serde_urlencoded v0.7.1
+   Compiling hyper v1.11.0
+   Compiling tower v0.5.3
+   Compiling hyper-util v0.1.20
+   Compiling axum v0.8.9
+   Compiling task_api v0.1.0 (/workspace/results/repeat-q4km/rust-axum-rest-run2/project)
+warning: unused imports: `delete`, `post`, and `put`
+ --> src/main.rs:4:15
+  |
+4 |     routing::{delete, get, post, put},
+  |               ^^^^^^       ^^^^  ^^^
+  |
+  = note: `#[warn(unused_imports)]` (part of `#[warn(unused)]`) on by default
+
+warning: `task_api` (bin "task_api") generated 1 warning (run `cargo fix --bin "task_api" -p task_api` to apply 1 suggestion)
+    Finished `dev` profile [unoptimized + debuginfo] target(s) in 11.25s
+=== cargo test ===
+   Compiling task_api v0.1.0 (/workspace/results/repeat-q4km/rust-axum-rest-run2/project)
+warning: unused imports: `delete`, `post`, and `put`
+ --> src/main.rs:4:15
+  |
+4 |     routing::{delete, get, post, put},
+  |               ^^^^^^       ^^^^  ^^^
+  |
+  = note: `#[warn(unused_imports)]` (part of `#[warn(unused)]`) on by default
+
+error[E0308]: `match` arms have incompatible types
+   --> src/main.rs:145:21
+    |
+143 |           let req = match body {
+    |  ___________________-
+144 | |             Some(b) => req.body(b.to_string()).unwrap(),
+    | |                        -------------------------------- this is found to be of type `axum::http::Request<std::string::String>`
+145 | |             None => req.body("").unwrap(),
+    | |                     ^^^^^^^^^^^^^^^^^^^^^ expected `Request<String>`, found `Request<&str>`
+146 | |         };
+    | |_________- `match` arms have incompatible types
+    |
+    = note: expected struct `axum::http::Request<std::string::String>`
+               found struct `axum::http::Request<&str>`
+
+For more information about this error, try `rustc --explain E0308`.
+warning: `task_api` (bin "task_api" test) generated 1 warning
+error: could not compile `task_api` (bin "task_api" test) due to 1 previous error; 1 warning emitted
+VERDICT build=pass test=fail

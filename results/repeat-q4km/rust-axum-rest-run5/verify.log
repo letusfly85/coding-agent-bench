@@ -1,0 +1,42 @@
+=== cargo build ===
+   Compiling tower v0.5.3
+   Compiling hyper-util v0.1.20
+   Compiling axum v0.8.9
+   Compiling task_api v0.1.0 (/workspace/results/repeat-q4km/rust-axum-rest-run5/project)
+error[E0432]: unresolved imports `axum::Path`, `axum::State`
+ --> src/main.rs:2:11
+  |
+2 |     Json, Path, Router, State,
+  |           ^^^^          ^^^^^ no `State` in the root
+  |           |
+  |           no `Path` in the root
+  |
+  = help: consider importing this struct instead:
+          std::path::Path
+
+warning: unused imports: `delete`, `post`, and `put`
+ --> src/main.rs:3:15
+  |
+3 |     routing::{delete, get, post, put},
+  |               ^^^^^^       ^^^^  ^^^
+  |
+  = note: `#[warn(unused_imports)]` (part of `#[warn(unused)]`) on by default
+
+error[E0599]: no method named `clone` found for struct `Task` in the current scope
+  --> src/main.rs:68:33
+   |
+11 | struct Task {
+   | ----------- method `clone` not found for this struct
+...
+68 |     guard.tasks.insert(id, task.clone());
+   |                                 ^^^^^ method not found in `Task`
+   |
+   = help: items from traits can only be used if the trait is implemented and in scope
+   = note: the following trait defines an item `clone`, perhaps you need to implement it:
+           candidate #1: `Clone`
+
+Some errors have detailed explanations: E0432, E0599.
+For more information about an error, try `rustc --explain E0432`.
+warning: `task_api` (bin "task_api") generated 1 warning
+error: could not compile `task_api` (bin "task_api") due to 2 previous errors; 1 warning emitted
+VERDICT build=fail test=skip

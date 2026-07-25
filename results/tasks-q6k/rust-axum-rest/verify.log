@@ -1,0 +1,83 @@
+=== cargo build ===
+   Compiling serde_json v1.0.151
+   Compiling percent-encoding v2.3.2
+   Compiling mime v0.3.17
+   Compiling memchr v2.8.3
+   Compiling futures-util v0.3.33
+   Compiling ryu v1.0.23
+   Compiling form_urlencoded v1.2.2
+   Compiling matchit v0.8.4
+   Compiling http v1.4.2
+   Compiling tracing v0.1.44
+   Compiling syn v2.0.119
+   Compiling syn v3.0.3
+   Compiling errno v0.3.14
+   Compiling socket2 v0.6.5
+   Compiling mio v1.2.2
+   Compiling signal-hook-registry v1.4.8
+   Compiling parking_lot v0.12.5
+   Compiling http-body v1.1.0
+   Compiling http-body-util v0.1.4
+   Compiling axum-core v0.5.6
+   Compiling serde_path_to_error v0.1.20
+   Compiling serde_derive v1.0.229
+   Compiling tokio-macros v2.7.1
+   Compiling tokio v1.53.1
+   Compiling serde_urlencoded v0.7.1
+   Compiling hyper v1.11.0
+   Compiling tower v0.5.3
+   Compiling hyper-util v0.1.20
+   Compiling axum v0.8.9
+   Compiling task_api v0.1.0 (/workspace/results/tasks-q6k/rust-axum-rest/project)
+warning: unused imports: `delete`, `post`, and `put`
+ --> src/main.rs:3:15
+  |
+3 |     routing::{delete, get, post, put},
+  |               ^^^^^^       ^^^^  ^^^
+  |
+  = note: `#[warn(unused_imports)]` (part of `#[warn(unused)]`) on by default
+
+warning: `task_api` (bin "task_api") generated 1 warning (run `cargo fix --bin "task_api" -p task_api` to apply 1 suggestion)
+    Finished `dev` profile [unoptimized + debuginfo] target(s) in 7.30s
+=== cargo test ===
+    |
+199 |         let mut app = app();
+    |             ------- move occurs because `app` has type `Router`, which does not implement the `Copy` trait
+...
+206 |         app.oneshot(req).await.unwrap();
+    |             ------------ `app` moved due to this method call
+...
+213 |         let res = app.oneshot(req).await.unwrap();
+    |                   ^^^ value used here after move
+    |
+note: `oneshot` takes ownership of the receiver `self`, which moves `app`
+   --> /root/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/tower-0.5.3/src/util/mod.rs:89:16
+    |
+ 89 |     fn oneshot(self, req: Request) -> Oneshot<Self, Request>
+    |                ^^^^
+help: you can `clone` the value and consume it, but this might not be your desired behavior
+    |
+206 |         app.clone().oneshot(req).await.unwrap();
+    |            ++++++++
+
+error[E0382]: use of moved value: `app`
+   --> src/main.rs:220:19
+    |
+199 |         let mut app = app();
+    |             ------- move occurs because `app` has type `Router`, which does not implement the `Copy` trait
+...
+213 |         let res = app.oneshot(req).await.unwrap();
+    |                       ------------ `app` moved due to this method call
+...
+220 |         let res = app.oneshot(req).await.unwrap();
+    |                   ^^^ value used here after move
+    |
+help: you can `clone` the value and consume it, but this might not be your desired behavior
+    |
+213 |         let res = app.clone().oneshot(req).await.unwrap();
+    |                      ++++++++
+
+For more information about this error, try `rustc --explain E0382`.
+warning: `task_api` (bin "task_api" test) generated 6 warnings
+error: could not compile `task_api` (bin "task_api" test) due to 3 previous errors; 6 warnings emitted
+VERDICT build=pass test=fail

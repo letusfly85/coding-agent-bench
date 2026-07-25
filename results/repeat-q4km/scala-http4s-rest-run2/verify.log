@@ -1,0 +1,42 @@
+=== scala-cli compile ===
+[[31merror[0m] value / is not a member of String, but could be made available as an extension method.
+[[31merror[0m] 
+[[31merror[0m] One of the following imports might make progress towards fixing the problem:
+[[31merror[0m] 
+[[31merror[0m]   import scala.math.Fractional.Implicits.infixFractionalOps
+[[31merror[0m]   import scala.math.Integral.Implicits.infixIntegralOps
+[[31merror[0m] 
+[[31merror[0m]     val delete = DELETE(path("tasks" / Long)) { id =>
+[[31merror[0m]                              ^^^^^^^^^
+[[31merror[0m] ./main.scala:90:15
+[[31merror[0m] Not found: type ExitCode
+[[31merror[0m]   val run: IO[ExitCode] = App.freshApp.flatMap { app =>
+[[31merror[0m]               ^^^^^^^^
+[[31merror[0m] ./main.scala:93:17
+[[31merror[0m] Found:    ([32m"0.0.0.0"[0m : String)
+[[31merror[0m] Required: com.comcast.ip4s.Host
+[[31merror[0m]       .withHost("0.0.0.0")
+[[31merror[0m]                 ^^^^^^^^^
+[90mError compiling project (Scala 3.3.4, JVM (17))[0m
+[[33mhint[0m] ./main.scala:2:15
+[[33mhint[0m] "http4s-ember-server is outdated, update to 0.23.36"
+[[33mhint[0m]      http4s-ember-server 0.23.30 -> org.http4s::http4s-ember-server:0.23.36
+[[33mhint[0m] //> using dep org.http4s::http4s-ember-server:0.23.30
+[[33mhint[0m]               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[[33mhint[0m] ./main.scala:3:15
+[[33mhint[0m] "http4s-dsl is outdated, update to 0.23.36"
+[[33mhint[0m]      http4s-dsl 0.23.30 -> org.http4s::http4s-dsl:0.23.36
+[[33mhint[0m] //> using dep org.http4s::http4s-dsl:0.23.30
+[[33mhint[0m]               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[[33mhint[0m] ./main.scala:4:15
+[[33mhint[0m] "http4s-circe is outdated, update to 0.23.36"
+[[33mhint[0m]      http4s-circe 0.23.30 -> org.http4s::http4s-circe:0.23.36
+[[33mhint[0m] //> using dep org.http4s::http4s-circe:0.23.30
+[[33mhint[0m]               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[[33mhint[0m] ./main.scala:5:15
+[[33mhint[0m] "circe-generic is outdated, update to 0.14.16"
+[[33mhint[0m]      circe-generic 0.14.10 -> io.circe::circe-generic:0.14.16
+[[33mhint[0m] //> using dep io.circe::circe-generic:0.14.10
+[[33mhint[0m]               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Compilation failed
+VERDICT build=fail test=skip
