@@ -18,12 +18,16 @@ bench/
     tool_call_fidelity.py  # 単発 tool call の JSON/スキーマ/ツール選択の正確性
     agent_loop.py          # 実ファイルを操作する多ターンエージェントループ
     run_prompt_variants.sh # 同一タスクをプロンプト変種ごとに N 回実行
+    ensemble_agent.py      # 指揮役とコード役を別モデルに分けたエージェントループ
   tasks/
     rust-axum-rest/        # 生成タスク（他に go / python / scala）
       PROMPT.md            # タスク仕様（モデルへの入力）
       verify.sh            # 生成物の検証（cargo build / cargo test）
     agent-fix-bug/         # エージェント用: 1 ファイル 1 バグ
     agent-multi-bug/       # エージェント用: 2 ファイル 3 バグ
+    agent-{go,rust,scala}-rest/  # エージェント用: テスト固定、実装のみ書かせる
+      project/             # エージェントに渡す。テストは改変不可
+      reference/           # 解けることを検証するための参照実装（モデルには渡さない）
     scala-http4s-rest/variants/  # 情報量を段階的に増やしたプロンプト 5 種
 docs/
   reports/                 # 計測レポート
@@ -45,7 +49,8 @@ results/                   # 生成物・生ログ（gitignore 対象外の要�
 
 - [2026-07-25 Qwen3.6-27B-NEO-CODE / RTX 5090 32GB](docs/reports/2026-07-25-qwen3.6-27b-neo-code-rtx5090.md) — 4 言語 × 5 試行、tool calling、エージェントループ
 - [2026-07-25 Qwen3-Coder-Next 80B-A3B / A100 80GB](docs/reports/2026-07-25-qwen3-coder-next-80b-a100.md) — non-thinking MoE。上記との比較つき
-- [2026-07-25 Scala / http4s はプロンプトで救えるか](docs/reports/2026-07-25-scala-http4s-prompt-experiment.md) — 5 変種 × 5 試行の切り分け
+- [2026-07-25 Scala / http4s はプロンプトで救えるか](docs/reports/2026-07-25-scala-http4s-prompt-experiment.md) — 5 変種 × 5 試行の切り分け。第 2 部でエージェントループも検証
+- [2026-07-25 指揮役とコード役を分ける](docs/reports/2026-07-25-ensemble-orchestrator-coder.md) — 2 モデルアンサンブル。Go / Rust × 3 構成
 
 ## 注意
 
