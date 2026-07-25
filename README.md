@@ -11,7 +11,10 @@
 bench/
   scripts/
     run_llama_bench.sh     # llama-bench によるスループット計測
+    vram_sweep.sh          # context 長 × KV 型ごとの VRAM 実測
     run_coding_task.py     # llama-server に対してコーディングタスクを投げる
+    run_repeat.sh          # 各タスクを N 回繰り返して pass@1 を出す
+    run_repair.sh          # ビルドエラーを返して再生成させる
   tasks/
     rust-axum-rest/
       PROMPT.md            # タスク仕様（モデルへの入力）
