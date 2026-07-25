@@ -1,0 +1,4 @@
+results/**/target/
+results/**/raw/*.bin
+*.gguf
+.DS_Store
