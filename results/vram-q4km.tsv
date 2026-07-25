@@ -1,0 +1,7 @@
+ctx	kv_type	vram_MiB	status
+8192	f16	16768	ok
+32768	f16	18328	ok
+131072	f16	24568	ok
+262144	f16	0	oom
+131072	q8_0	21198	ok
+262144	q8_0	26190	ok

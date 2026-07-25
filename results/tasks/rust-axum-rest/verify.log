@@ -1,0 +1,71 @@
+=== cargo build ===
+   Compiling ryu v1.0.23
+   Compiling matchit v0.8.4
+   Compiling http v1.4.2
+   Compiling tracing v0.1.44
+   Compiling syn v2.0.119
+   Compiling syn v3.0.3
+   Compiling errno v0.3.14
+   Compiling mio v1.2.2
+   Compiling socket2 v0.6.5
+   Compiling http-body v1.1.0
+   Compiling signal-hook-registry v1.4.8
+   Compiling http-body-util v0.1.4
+   Compiling parking_lot v0.12.5
+   Compiling axum-core v0.5.6
+   Compiling serde_path_to_error v0.1.20
+   Compiling serde_derive v1.0.229
+   Compiling tokio-macros v2.7.1
+   Compiling tokio v1.53.1
+   Compiling serde_urlencoded v0.7.1
+   Compiling hyper v1.11.0
+   Compiling tower v0.5.3
+   Compiling hyper-util v0.1.20
+   Compiling axum v0.8.9
+   Compiling task_api v0.1.0 (/workspace/results/tasks/rust-axum-rest/project)
+warning: unused imports: `Request`, `body::Body`, `delete`, `post`, and `put`
+ --> src/main.rs:2:5
+  |
+2 |     body::Body,
+  |     ^^^^^^^^^^
+3 |     extract::{Path, State},
+4 |     http::{Request, StatusCode},
+  |            ^^^^^^^
+...
+7 |     routing::{delete, get, post, put},
+  |               ^^^^^^       ^^^^  ^^^
+  |
+  = note: `#[warn(unused_imports)]` (part of `#[warn(unused)]`) on by default
+
+warning: `task_api` (bin "task_api") generated 1 warning (run `cargo fix --bin "task_api" -p task_api` to apply 1 suggestion)
+    Finished `dev` profile [unoptimized + debuginfo] target(s) in 7.52s
+=== cargo test ===
+   Compiling task_api v0.1.0 (/workspace/results/tasks/rust-axum-rest/project)
+warning: unused imports: `Request`, `body::Body`, `delete`, `post`, and `put`
+ --> src/main.rs:2:5
+  |
+2 |     body::Body,
+  |     ^^^^^^^^^^
+3 |     extract::{Path, State},
+4 |     http::{Request, StatusCode},
+  |            ^^^^^^^
+...
+7 |     routing::{delete, get, post, put},
+  |               ^^^^^^       ^^^^  ^^^
+  |
+  = note: `#[warn(unused_imports)]` (part of `#[warn(unused)]`) on by default
+
+warning: `task_api` (bin "task_api" test) generated 1 warning (run `cargo fix --bin "task_api" -p task_api --tests` to apply 1 suggestion)
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 0.71s
+     Running unittests src/main.rs (target/debug/deps/task_api-83abce828ba87b77)
+
+running 5 tests
+test tests::test_get_nonexistent_task_returns_404 ... ok
+test tests::test_create_task_returns_201_and_id_1 ... ok
+test tests::test_delete_task_and_verify_404 ... ok
+test tests::test_get_task_after_creation ... ok
+test tests::test_health ... ok
+
+test result: ok. 5 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+VERDICT build=pass test=pass

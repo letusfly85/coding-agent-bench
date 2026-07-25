@@ -1,0 +1,42 @@
+=== scala-cli compile ===
+[[31merror[0m]             case Some(task) => Ok(task)
+[[31merror[0m]                                        ^
+[[31merror[0m] ./main.scala:53:30
+[[31merror[0m] Cannot decode into a value of type UpdateTaskReq, because no EntityDecoder[cats.effect.IO, UpdateTaskReq] instance could be found.
+[[31merror[0m] 
+[[31merror[0m] One of the following imports might fix the problem:
+[[31merror[0m] 
+[[31merror[0m]   import org.http4s.circe.CirceEntityCodec.circeEntityDecoder
+[[31merror[0m]   import org.http4s.circe.CirceEntityDecoder.circeEntityDecoder
+[[31merror[0m]   import org.http4s.circe.CirceSensitiveDataEntityDecoder.circeEntityDecoder
+[[31merror[0m] 
+[[31merror[0m]         req.as[UpdateTaskReq].flatMap { input =>
+[[31merror[0m]                              ^
+[[31merror[0m] ./main.scala:86:17
+[[31merror[0m] Found:    ([31m3000[0m : Int)
+[[31merror[0m] Required: com.comcast.ip4s.Port
+[[31merror[0m]       .withPort(3000)
+[[31merror[0m]                 ^^^^
+[90mError compiling project (Scala 3.3.4, JVM (17))[0m
+[[33mhint[0m] ./main.scala:2:15
+[[33mhint[0m] "http4s-ember-server is outdated, update to 0.23.36"
+[[33mhint[0m]      http4s-ember-server 0.23.30 -> org.http4s::http4s-ember-server:0.23.36
+[[33mhint[0m] //> using dep org.http4s::http4s-ember-server:0.23.30
+[[33mhint[0m]               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[[33mhint[0m] ./main.scala:3:15
+[[33mhint[0m] "http4s-dsl is outdated, update to 0.23.36"
+[[33mhint[0m]      http4s-dsl 0.23.30 -> org.http4s::http4s-dsl:0.23.36
+[[33mhint[0m] //> using dep org.http4s::http4s-dsl:0.23.30
+[[33mhint[0m]               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[[33mhint[0m] ./main.scala:4:15
+[[33mhint[0m] "http4s-circe is outdated, update to 0.23.36"
+[[33mhint[0m]      http4s-circe 0.23.30 -> org.http4s::http4s-circe:0.23.36
+[[33mhint[0m] //> using dep org.http4s::http4s-circe:0.23.30
+[[33mhint[0m]               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[[33mhint[0m] ./main.scala:5:15
+[[33mhint[0m] "circe-generic is outdated, update to 0.14.16"
+[[33mhint[0m]      circe-generic 0.14.10 -> io.circe::circe-generic:0.14.16
+[[33mhint[0m] //> using dep io.circe::circe-generic:0.14.10
+[[33mhint[0m]               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Compilation failed
+VERDICT build=fail test=skip

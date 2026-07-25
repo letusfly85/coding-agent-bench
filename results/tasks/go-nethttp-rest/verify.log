@@ -1,0 +1,10 @@
+=== go vet ===
+# task_api
+# [task_api]
+vet: ./main.go:142:30: mux.Vars undefined (type *http.ServeMux has no field or method Vars)
+=== go build ===
+# task_api
+./main.go:142:30: mux.Vars undefined (type *http.ServeMux has no field or method Vars)
+./main.go:159:30: mux.Vars undefined (type *http.ServeMux has no field or method Vars)
+./main.go:184:30: mux.Vars undefined (type *http.ServeMux has no field or method Vars)
+VERDICT build=fail test=skip

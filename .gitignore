@@ -2,3 +2,7 @@ results/**/target/
 results/**/raw/*.bin
 *.gguf
 .DS_Store
+results/**/.scala-build/
+results/**/__pycache__/
+results/**/.pytest_cache/
+results/**/Cargo.lock

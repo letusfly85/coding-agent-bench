@@ -39,7 +39,7 @@ def stream_completion(base_url, model, prompt, temperature, top_p, top_k, max_to
 
     content, reasoning = [], []
     ttft = None
-    usage = {}
+    usage, timings = {}, {}
     t0 = time.perf_counter()
 
     with urllib.request.urlopen(req, timeout=3600) as resp:
@@ -56,6 +56,10 @@ def stream_completion(base_url, model, prompt, temperature, top_p, top_k, max_to
                 continue
             if chunk.get("usage"):
                 usage = chunk["usage"]
+            # llama.cpp reports its own timings block on the final chunk; keep it as a
+            # fallback when the server does not honour stream_options.include_usage.
+            if chunk.get("timings"):
+                timings.update(chunk["timings"])
             for choice in chunk.get("choices", []):
                 delta = choice.get("delta") or {}
                 # llama.cpp emits reasoning separately when --reasoning-format is used,
@@ -85,16 +89,22 @@ def stream_completion(base_url, model, prompt, temperature, top_p, top_k, max_to
         think += tail
         text = head
 
+    prompt_tokens = usage.get("prompt_tokens") or timings.get("prompt_n")
+    completion_tokens = usage.get("completion_tokens") or timings.get("predicted_n")
+
     metrics = {
         "ttft_s": round(ttft, 3) if ttft is not None else None,
         "total_s": round(total, 3),
-        "prompt_tokens": usage.get("prompt_tokens"),
-        "completion_tokens": usage.get("completion_tokens"),
+        "prompt_tokens": prompt_tokens,
+        "completion_tokens": completion_tokens,
         "reasoning_chars": len(think),
         "answer_chars": len(text),
     }
-    if usage.get("completion_tokens") and total > 0:
-        metrics["output_tok_s"] = round(usage["completion_tokens"] / total, 2)
+    if timings:
+        metrics["prompt_tok_s"] = round(timings.get("prompt_per_second", 0), 2) or None
+        metrics["predicted_tok_s"] = round(timings.get("predicted_per_second", 0), 2) or None
+    if completion_tokens and total > 0:
+        metrics["output_tok_s_wall"] = round(completion_tokens / total, 2)
     return text.strip(), think, metrics
 
 
