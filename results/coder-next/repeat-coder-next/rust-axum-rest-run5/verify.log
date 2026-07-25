@@ -1,0 +1,42 @@
+=== cargo build ===
+75 - ) -> impl IntoResponse {
+75 + ) -> Box<dyn IntoResponse> {
+   |
+help: if you change the return type to expect trait objects, box the returned expressions
+   |
+78 ~         Box::new((StatusCode::OK, Json(task.clone())))
+79 |     } else {
+80 ~         Box::new(StatusCode::NOT_FOUND)
+   |
+
+error[E0308]: `if` and `else` have incompatible types
+  --> src/main.rs:95:9
+   |
+90 | /     if let Some(task) = tasks.iter_mut().find(|t| t.id == id) {
+91 | |         task.title = payload.title;
+92 | |         task.done = payload.done;
+93 | |         (StatusCode::OK, Json(task.clone()))
+   | |         ------------------------------------ expected because of this
+94 | |     } else {
+95 | |         StatusCode::NOT_FOUND
+   | |         ^^^^^^^^^^^^^^^^^^^^^ expected `(StatusCode, Json<Task>)`, found `StatusCode`
+96 | |     }
+   | |_____- `if` and `else` have incompatible types
+   |
+   = note: expected tuple `(StatusCode, Json<Task>)`
+             found struct `StatusCode`
+help: you could change the return type to be a boxed trait object
+   |
+88 - ) -> impl IntoResponse {
+88 + ) -> Box<dyn IntoResponse> {
+   |
+help: if you change the return type to expect trait objects, box the returned expressions
+   |
+93 ~         Box::new((StatusCode::OK, Json(task.clone())))
+94 |     } else {
+95 ~         Box::new(StatusCode::NOT_FOUND)
+   |
+
+For more information about this error, try `rustc --explain E0308`.
+error: could not compile `task_api` (bin "task_api") due to 2 previous errors
+VERDICT build=fail test=skip

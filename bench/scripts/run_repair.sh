@@ -7,6 +7,14 @@
 #   TASKS="go-nethttp-rest" FROM="-repair1" TO="-repair2" run_repair.sh
 set -uo pipefail
 
+# Sampling defaults follow the model card. Override per model, e.g.
+#   TEMP=1.0 TOP_K=40 ...   (Qwen3-Coder-Next)
+#   TEMP=0.6 TOP_K=20 ...   (Qwen3.6-27B thinking, coding preset)
+TEMP=${TEMP:-0.6}
+TOP_P=${TOP_P:-0.95}
+TOP_K=${TOP_K:-20}
+MAX_TOKENS=${MAX_TOKENS:-24000}
+
 REPO=${REPO:-/workspace/coding-agent-bench}
 OUT=${OUT:-/workspace/results/tasks}
 PORT=${PORT:-8080}
@@ -40,7 +48,7 @@ for T in $TASKS; do
     --base-url "http://127.0.0.1:$PORT" \
     --prompt-file "$P" \
     --out-dir "$OUT" --label "$DST_LABEL" \
-    --temperature 0.6 --top-p 0.95 --top-k 20 --max-tokens 24000
+    --temperature "$TEMP" --top-p "$TOP_P" --top-k "$TOP_K" --max-tokens "$MAX_TOKENS"
 
   echo "----- verify $DST_LABEL -----"
   bash "$REPO/bench/tasks/$T/verify.sh" "$OUT/$DST_LABEL/project" \

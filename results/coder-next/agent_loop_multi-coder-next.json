@@ -1,0 +1,618 @@
+{
+  "summary": {
+    "episodes": 5,
+    "solved": 5,
+    "turns_per_episode": [
+      13,
+      12,
+      10,
+      9,
+      11
+    ],
+    "total_turns": 55,
+    "malformed_turns": 0,
+    "malformed_breakdown": {},
+    "turn_latency_s": {
+      "min": 0.38,
+      "median": 0.72,
+      "max": 3.93
+    }
+  },
+  "episodes": [
+    {
+      "turns": [
+        {
+          "turn": 1,
+          "secs": 0.95,
+          "completion_tokens": 20,
+          "prompt_tokens": 646,
+          "n_calls": 1,
+          "tool": "list_dir",
+          "status": "ok",
+          "result_head": "README.md\napp/\npytest.ini\ntests/"
+        },
+        {
+          "turn": 2,
+          "secs": 0.45,
+          "completion_tokens": 21,
+          "prompt_tokens": 688,
+          "n_calls": 1,
+          "tool": "list_dir",
+          "status": "ok",
+          "result_head": "calc.py\nparser.py\nreport.py"
+        },
+        {
+          "turn": 3,
+          "secs": 0.42,
+          "completion_tokens": 21,
+          "prompt_tokens": 730,
+          "n_calls": 1,
+          "tool": "list_dir",
+          "status": "ok",
+          "result_head": "test_pipeline.py"
+        },
+        {
+          "turn": 4,
+          "secs": 0.45,
+          "completion_tokens": 24,
+          "prompt_tokens": 767,
+          "n_calls": 1,
+          "tool": "read_file",
+          "status": "ok",
+          "result_head": "   1| \"\"\"Score aggregation.\"\"\"\n   2| \n   3| \n   4| def average_score(records):\n   5|     \"\"\"Mean score across records, a"
+        },
+        {
+          "turn": 5,
+          "secs": 0.58,
+          "completion_tokens": 23,
+          "prompt_tokens": 1081,
+          "n_calls": 1,
+          "tool": "read_file",
+          "status": "ok",
+          "result_head": "   1| \"\"\"Parse the pipe-delimited records used by the ingest pipeline.\"\"\"\n   2| \n   3| FIELDS = (\"id\", \"name\", \"score\", "
+        },
+        {
+          "turn": 6,
+          "secs": 0.71,
+          "completion_tokens": 23,
+          "prompt_tokens": 1587,
+          "n_calls": 1,
+          "tool": "read_file",
+          "status": "ok",
+          "result_head": "   1| \"\"\"Human-readable report rendering.\"\"\"\n   2| \n   3| from app.calc import average_score, pass_rate\n   4| \n   5| \n  "
+        },
+        {
+          "turn": 7,
+          "secs": 0.64,
+          "completion_tokens": 24,
+          "prompt_tokens": 1854,
+          "n_calls": 1,
+          "tool": "read_file",
+          "status": "ok",
+          "result_head": "   1| import pytest\n   2| \n   3| from app.calc import average_score, pass_rate, top_n\n   4| from app.parser import parse"
+        },
+        {
+          "turn": 8,
+          "secs": 0.8,
+          "completion_tokens": 13,
+          "prompt_tokens": 2703,
+          "n_calls": 1,
+          "tool": "run_tests",
+          "status": "ok",
+          "result_head": "exit=1\nrtionError\n_________________________ test_top_n_is_highest_first __________________________\n\n    def test_top_n_i"
+        },
+        {
+          "turn": 9,
+          "secs": 3.93,
+          "completion_tokens": 381,
+          "prompt_tokens": 3551,
+          "n_calls": 1,
+          "tool": "write_file",
+          "status": "ok",
+          "result_head": "wrote app/calc.py (719 bytes)"
+        },
+        {
+          "turn": 10,
+          "secs": 0.4,
+          "completion_tokens": 13,
+          "prompt_tokens": 3956,
+          "n_calls": 1,
+          "tool": "run_tests",
+          "status": "ok",
+          "result_head": "exit=1\n........F.                                                               [100%]\n================================="
+        },
+        {
+          "turn": 11,
+          "secs": 2.25,
+          "completion_tokens": 215,
+          "prompt_tokens": 4183,
+          "n_calls": 1,
+          "tool": "write_file",
+          "status": "ok",
+          "result_head": "wrote app/report.py (598 bytes)"
+        },
+        {
+          "turn": 12,
+          "secs": 0.55,
+          "completion_tokens": 13,
+          "prompt_tokens": 4420,
+          "n_calls": 1,
+          "tool": "run_tests",
+          "status": "ok",
+          "result_head": "exit=0\n..........                                                               [100%]\n10 passed in 0.07s\n"
+        },
+        {
+          "turn": 13,
+          "secs": 2.18,
+          "completion_tokens": 223,
+          "prompt_tokens": 4468,
+          "n_calls": 1,
+          "tool": "finish",
+          "status": "ok",
+          "result_head": "finished: Fixed 3 bugs in the codebase:\n1. calc.py: Changed floor division (//) to true division (/) in average_score to"
+        }
+      ],
+      "n_turns": 13,
+      "called_finish": true,
+      "tests_pass": true,
+      "tool_errors": 0,
+      "episode": 1
+    },
+    {
+      "turns": [
+        {
+          "turn": 1,
+          "secs": 0.97,
+          "completion_tokens": 20,
+          "prompt_tokens": 646,
+          "n_calls": 1,
+          "tool": "list_dir",
+          "status": "ok",
+          "result_head": "README.md\napp/\npytest.ini\ntests/"
+        },
+        {
+          "turn": 2,
+          "secs": 0.42,
+          "completion_tokens": 21,
+          "prompt_tokens": 688,
+          "n_calls": 1,
+          "tool": "list_dir",
+          "status": "ok",
+          "result_head": "calc.py\nparser.py\nreport.py"
+        },
+        {
+          "turn": 3,
+          "secs": 0.42,
+          "completion_tokens": 21,
+          "prompt_tokens": 730,
+          "n_calls": 1,
+          "tool": "list_dir",
+          "status": "ok",
+          "result_head": "test_pipeline.py"
+        },
+        {
+          "turn": 4,
+          "secs": 0.45,
+          "completion_tokens": 24,
+          "prompt_tokens": 767,
+          "n_calls": 1,
+          "tool": "read_file",
+          "status": "ok",
+          "result_head": "   1| \"\"\"Score aggregation.\"\"\"\n   2| \n   3| \n   4| def average_score(records):\n   5|     \"\"\"Mean score across records, a"
+        },
+        {
+          "turn": 5,
+          "secs": 0.58,
+          "completion_tokens": 23,
+          "prompt_tokens": 1081,
+          "n_calls": 1,
+          "tool": "read_file",
+          "status": "ok",
+          "result_head": "   1| \"\"\"Parse the pipe-delimited records used by the ingest pipeline.\"\"\"\n   2| \n   3| FIELDS = (\"id\", \"name\", \"score\", "
+        },
+        {
+          "turn": 6,
+          "secs": 0.69,
+          "completion_tokens": 23,
+          "prompt_tokens": 1587,
+          "n_calls": 1,
+          "tool": "read_file",
+          "status": "ok",
+          "result_head": "   1| \"\"\"Human-readable report rendering.\"\"\"\n   2| \n   3| from app.calc import average_score, pass_rate\n   4| \n   5| \n  "
+        },
+        {
+          "turn": 7,
+          "secs": 0.61,
+          "completion_tokens": 24,
+          "prompt_tokens": 1854,
+          "n_calls": 1,
+          "tool": "read_file",
+          "status": "ok",
+          "result_head": "   1| import pytest\n   2| \n   3| from app.calc import average_score, pass_rate, top_n\n   4| from app.parser import parse"
+        },
+        {
+          "turn": 8,
+          "secs": 0.8,
+          "completion_tokens": 13,
+          "prompt_tokens": 2703,
+          "n_calls": 1,
+          "tool": "run_tests",
+          "status": "ok",
+          "result_head": "exit=1\nrtionError\n_________________________ test_top_n_is_highest_first __________________________\n\n    def test_top_n_i"
+        },
+        {
+          "turn": 9,
+          "secs": 3.88,
+          "completion_tokens": 374,
+          "prompt_tokens": 3551,
+          "n_calls": 1,
+          "tool": "write_file",
+          "status": "ok",
+          "result_head": "wrote app/calc.py (719 bytes)"
+        },
+        {
+          "turn": 10,
+          "secs": 1.87,
+          "completion_tokens": 186,
+          "prompt_tokens": 3949,
+          "n_calls": 1,
+          "tool": "write_file",
+          "status": "ok",
+          "result_head": "wrote app/report.py (598 bytes)"
+        },
+        {
+          "turn": 11,
+          "secs": 0.39,
+          "completion_tokens": 13,
+          "prompt_tokens": 4158,
+          "n_calls": 1,
+          "tool": "run_tests",
+          "status": "ok",
+          "result_head": "exit=0\n..........                                                               [100%]\n10 passed in 0.22s\n"
+        },
+        {
+          "turn": 12,
+          "secs": 2.07,
+          "completion_tokens": 210,
+          "prompt_tokens": 4206,
+          "n_calls": 1,
+          "tool": "finish",
+          "status": "ok",
+          "result_head": "finished: Fixed 4 bugs across 2 files:\n1. `app/calc.py`: Changed integer division `//` to true division `/` in `average_"
+        }
+      ],
+      "n_turns": 12,
+      "called_finish": true,
+      "tests_pass": true,
+      "tool_errors": 0,
+      "episode": 2
+    },
+    {
+      "turns": [
+        {
+          "turn": 1,
+          "secs": 1.0,
+          "completion_tokens": 13,
+          "prompt_tokens": 646,
+          "n_calls": 1,
+          "tool": "run_tests",
+          "status": "ok",
+          "result_head": "exit=1\nrtionError\n_________________________ test_top_n_is_highest_first __________________________\n\n    def test_top_n_i"
+        },
+        {
+          "turn": 2,
+          "secs": 1.04,
+          "completion_tokens": 39,
+          "prompt_tokens": 1494,
+          "n_calls": 1,
+          "tool": "read_file",
+          "status": "ok",
+          "result_head": "   1| import pytest\n   2| \n   3| from app.calc import average_score, pass_rate, top_n\n   4| from app.parser import parse"
+        },
+        {
+          "turn": 3,
+          "secs": 0.9,
+          "completion_tokens": 21,
+          "prompt_tokens": 2358,
+          "n_calls": 1,
+          "tool": "list_dir",
+          "status": "ok",
+          "result_head": "calc.py\nparser.py\nreport.py"
+        },
+        {
+          "turn": 4,
+          "secs": 0.46,
+          "completion_tokens": 24,
+          "prompt_tokens": 2400,
+          "n_calls": 1,
+          "tool": "read_file",
+          "status": "ok",
+          "result_head": "   1| \"\"\"Score aggregation.\"\"\"\n   2| \n   3| \n   4| def average_score(records):\n   5|     \"\"\"Mean score across records, a"
+        },
+        {
+          "turn": 5,
+          "secs": 0.62,
+          "completion_tokens": 23,
+          "prompt_tokens": 2714,
+          "n_calls": 1,
+          "tool": "read_file",
+          "status": "ok",
+          "result_head": "   1| \"\"\"Human-readable report rendering.\"\"\"\n   2| \n   3| from app.calc import average_score, pass_rate\n   4| \n   5| \n  "
+        },
+        {
+          "turn": 6,
+          "secs": 0.64,
+          "completion_tokens": 23,
+          "prompt_tokens": 2981,
+          "n_calls": 1,
+          "tool": "read_file",
+          "status": "ok",
+          "result_head": "   1| \"\"\"Parse the pipe-delimited records used by the ingest pipeline.\"\"\"\n   2| \n   3| FIELDS = (\"id\", \"name\", \"score\", "
+        },
+        {
+          "turn": 7,
+          "secs": 3.52,
+          "completion_tokens": 356,
+          "prompt_tokens": 3487,
+          "n_calls": 1,
+          "tool": "write_file",
+          "status": "ok",
+          "result_head": "wrote app/calc.py (719 bytes)"
+        },
+        {
+          "turn": 8,
+          "secs": 1.85,
+          "completion_tokens": 186,
+          "prompt_tokens": 3867,
+          "n_calls": 1,
+          "tool": "write_file",
+          "status": "ok",
+          "result_head": "wrote app/report.py (598 bytes)"
+        },
+        {
+          "turn": 9,
+          "secs": 0.38,
+          "completion_tokens": 13,
+          "prompt_tokens": 4076,
+          "n_calls": 1,
+          "tool": "run_tests",
+          "status": "ok",
+          "result_head": "exit=0\n..........                                                               [100%]\n10 passed in 0.13s\n"
+        },
+        {
+          "turn": 10,
+          "secs": 1.69,
+          "completion_tokens": 164,
+          "prompt_tokens": 4124,
+          "n_calls": 1,
+          "tool": "finish",
+          "status": "ok",
+          "result_head": "finished: Fixed 3 bugs:\n\n1. **`app/calc.py:9`** - Changed `//` (integer division) to `/` (float division) in `average_sc"
+        }
+      ],
+      "n_turns": 10,
+      "called_finish": true,
+      "tests_pass": true,
+      "tool_errors": 0,
+      "episode": 3
+    },
+    {
+      "turns": [
+        {
+          "turn": 1,
+          "secs": 0.96,
+          "completion_tokens": 13,
+          "prompt_tokens": 646,
+          "n_calls": 1,
+          "tool": "run_tests",
+          "status": "ok",
+          "result_head": "exit=1\nrtionError\n_________________________ test_top_n_is_highest_first __________________________\n\n    def test_top_n_i"
+        },
+        {
+          "turn": 2,
+          "secs": 1.07,
+          "completion_tokens": 41,
+          "prompt_tokens": 1494,
+          "n_calls": 1,
+          "tool": "read_file",
+          "status": "ok",
+          "result_head": "   1| import pytest\n   2| \n   3| from app.calc import average_score, pass_rate, top_n\n   4| from app.parser import parse"
+        },
+        {
+          "turn": 3,
+          "secs": 0.9,
+          "completion_tokens": 21,
+          "prompt_tokens": 2360,
+          "n_calls": 1,
+          "tool": "list_dir",
+          "status": "ok",
+          "result_head": "calc.py\nparser.py\nreport.py"
+        },
+        {
+          "turn": 4,
+          "secs": 0.46,
+          "completion_tokens": 24,
+          "prompt_tokens": 2402,
+          "n_calls": 1,
+          "tool": "read_file",
+          "status": "ok",
+          "result_head": "   1| \"\"\"Score aggregation.\"\"\"\n   2| \n   3| \n   4| def average_score(records):\n   5|     \"\"\"Mean score across records, a"
+        },
+        {
+          "turn": 5,
+          "secs": 0.62,
+          "completion_tokens": 23,
+          "prompt_tokens": 2716,
+          "n_calls": 1,
+          "tool": "read_file",
+          "status": "ok",
+          "result_head": "   1| \"\"\"Human-readable report rendering.\"\"\"\n   2| \n   3| from app.calc import average_score, pass_rate\n   4| \n   5| \n  "
+        },
+        {
+          "turn": 6,
+          "secs": 3.44,
+          "completion_tokens": 359,
+          "prompt_tokens": 2983,
+          "n_calls": 1,
+          "tool": "write_file",
+          "status": "ok",
+          "result_head": "wrote app/calc.py (719 bytes)"
+        },
+        {
+          "turn": 7,
+          "secs": 1.85,
+          "completion_tokens": 186,
+          "prompt_tokens": 3366,
+          "n_calls": 1,
+          "tool": "write_file",
+          "status": "ok",
+          "result_head": "wrote app/report.py (598 bytes)"
+        },
+        {
+          "turn": 8,
+          "secs": 0.41,
+          "completion_tokens": 13,
+          "prompt_tokens": 3575,
+          "n_calls": 1,
+          "tool": "run_tests",
+          "status": "ok",
+          "result_head": "exit=0\n..........                                                               [100%]\n10 passed in 0.37s\n"
+        },
+        {
+          "turn": 9,
+          "secs": 1.67,
+          "completion_tokens": 160,
+          "prompt_tokens": 3623,
+          "n_calls": 1,
+          "tool": "finish",
+          "status": "ok",
+          "result_head": "finished: Fixed 3 bugs in the codebase:\n\n1. In `app/calc.py` line 9: Changed integer division `//` to float division `/`"
+        }
+      ],
+      "n_turns": 9,
+      "called_finish": true,
+      "tests_pass": true,
+      "tool_errors": 0,
+      "episode": 4
+    },
+    {
+      "turns": [
+        {
+          "turn": 1,
+          "secs": 1.0,
+          "completion_tokens": 13,
+          "prompt_tokens": 646,
+          "n_calls": 1,
+          "tool": "run_tests",
+          "status": "ok",
+          "result_head": "exit=1\nrtionError\n_________________________ test_top_n_is_highest_first __________________________\n\n    def test_top_n_i"
+        },
+        {
+          "turn": 2,
+          "secs": 1.03,
+          "completion_tokens": 34,
+          "prompt_tokens": 1494,
+          "n_calls": 1,
+          "tool": "list_dir",
+          "status": "ok",
+          "result_head": "README.md\napp/\npytest.ini\ntests/"
+        },
+        {
+          "turn": 3,
+          "secs": 0.43,
+          "completion_tokens": 21,
+          "prompt_tokens": 1550,
+          "n_calls": 1,
+          "tool": "list_dir",
+          "status": "ok",
+          "result_head": "calc.py\nparser.py\nreport.py"
+        },
+        {
+          "turn": 4,
+          "secs": 0.45,
+          "completion_tokens": 24,
+          "prompt_tokens": 1592,
+          "n_calls": 1,
+          "tool": "read_file",
+          "status": "ok",
+          "result_head": "   1| \"\"\"Score aggregation.\"\"\"\n   2| \n   3| \n   4| def average_score(records):\n   5|     \"\"\"Mean score across records, a"
+        },
+        {
+          "turn": 5,
+          "secs": 0.61,
+          "completion_tokens": 23,
+          "prompt_tokens": 1906,
+          "n_calls": 1,
+          "tool": "read_file",
+          "status": "ok",
+          "result_head": "   1| \"\"\"Human-readable report rendering.\"\"\"\n   2| \n   3| from app.calc import average_score, pass_rate\n   4| \n   5| \n  "
+        },
+        {
+          "turn": 6,
+          "secs": 0.64,
+          "completion_tokens": 23,
+          "prompt_tokens": 2173,
+          "n_calls": 1,
+          "tool": "read_file",
+          "status": "ok",
+          "result_head": "   1| \"\"\"Parse the pipe-delimited records used by the ingest pipeline.\"\"\"\n   2| \n   3| FIELDS = (\"id\", \"name\", \"score\", "
+        },
+        {
+          "turn": 7,
+          "secs": 0.72,
+          "completion_tokens": 24,
+          "prompt_tokens": 2679,
+          "n_calls": 1,
+          "tool": "read_file",
+          "status": "ok",
+          "result_head": "   1| import pytest\n   2| \n   3| from app.calc import average_score, pass_rate, top_n\n   4| from app.parser import parse"
+        },
+        {
+          "turn": 8,
+          "secs": 3.85,
+          "completion_tokens": 371,
+          "prompt_tokens": 3528,
+          "n_calls": 1,
+          "tool": "write_file",
+          "status": "ok",
+          "result_head": "wrote app/calc.py (706 bytes)"
+        },
+        {
+          "turn": 9,
+          "secs": 1.82,
+          "completion_tokens": 185,
+          "prompt_tokens": 3923,
+          "n_calls": 1,
+          "tool": "write_file",
+          "status": "ok",
+          "result_head": "wrote app/report.py (585 bytes)"
+        },
+        {
+          "turn": 10,
+          "secs": 0.38,
+          "completion_tokens": 13,
+          "prompt_tokens": 4131,
+          "n_calls": 1,
+          "tool": "run_tests",
+          "status": "ok",
+          "result_head": "exit=0\n..........                                                               [100%]\n10 passed in 0.20s\n"
+        },
+        {
+          "turn": 11,
+          "secs": 2.14,
+          "completion_tokens": 219,
+          "prompt_tokens": 4179,
+          "n_calls": 1,
+          "tool": "finish",
+          "status": "ok",
+          "result_head": "finished: All tests are now passing. I fixed three bugs in the code:\n\n1. **app/calc.py - `average_score`**: Changed `//`"
+        }
+      ],
+      "n_turns": 11,
+      "called_finish": true,
+      "tests_pass": true,
+      "tool_errors": 0,
+      "episode": 5
+    }
+  ]
+}

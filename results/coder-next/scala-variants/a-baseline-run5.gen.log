@@ -1,0 +1,18 @@
+[a-baseline-run5] requesting…
+  wrote main.scala (2641 bytes)
+  wrote main.test.scala (3260 bytes)
+{
+  "ttft_s": 0.353,
+  "total_s": 13.944,
+  "prompt_tokens": 787,
+  "completion_tokens": 1625,
+  "reasoning_chars": 0,
+  "answer_chars": 5974,
+  "prompt_tok_s": 46.13,
+  "predicted_tok_s": 119.57,
+  "output_tok_s_wall": 116.54,
+  "files_extracted": [
+    "main.scala",
+    "main.test.scala"
+  ]
+}

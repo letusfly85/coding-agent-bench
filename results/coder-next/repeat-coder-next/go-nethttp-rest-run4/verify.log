@@ -1,0 +1,5 @@
+=== go vet ===
+=== go build ===
+=== go test ===
+ok  	task_api	0.029s
+VERDICT build=pass test=pass

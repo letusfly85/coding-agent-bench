@@ -1,0 +1,18 @@
+[scala-http4s-rest-run1] requesting…
+  wrote main.scala (3479 bytes)
+  wrote main.test.scala (2815 bytes)
+{
+  "ttft_s": 0.909,
+  "total_s": 15.398,
+  "prompt_tokens": 787,
+  "completion_tokens": 1740,
+  "reasoning_chars": 0,
+  "answer_chars": 6367,
+  "prompt_tok_s": 1378.28,
+  "predicted_tok_s": 120.1,
+  "output_tok_s_wall": 113.0,
+  "files_extracted": [
+    "main.scala",
+    "main.test.scala"
+  ]
+}

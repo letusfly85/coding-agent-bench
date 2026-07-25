@@ -1,0 +1,9 @@
+=== go vet ===
+=== go build ===
+=== go test ===
+--- FAIL: TestGetTask (0.00s)
+    main_test.go:86: unexpected task: {ID:1 Title:Test task Done:false}
+FAIL
+FAIL	task_api	0.029s
+FAIL
+VERDICT build=pass test=fail

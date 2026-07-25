@@ -1,0 +1,18 @@
+[d-skeleton-run4] requesting…
+  wrote main.scala (2729 bytes)
+  wrote main.test.scala (2620 bytes)
+{
+  "ttft_s": 0.372,
+  "total_s": 12.968,
+  "prompt_tokens": 1096,
+  "completion_tokens": 1506,
+  "reasoning_chars": 0,
+  "answer_chars": 5422,
+  "prompt_tok_s": 45.91,
+  "predicted_tok_s": 119.56,
+  "output_tok_s_wall": 116.13,
+  "files_extracted": [
+    "main.scala",
+    "main.test.scala"
+  ]
+}

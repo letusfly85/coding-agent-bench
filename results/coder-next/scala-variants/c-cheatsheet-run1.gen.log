@@ -1,0 +1,18 @@
+[c-cheatsheet-run1] requesting…
+  wrote main.scala (3049 bytes)
+  wrote main.test.scala (3556 bytes)
+{
+  "ttft_s": 0.951,
+  "total_s": 16.292,
+  "prompt_tokens": 1160,
+  "completion_tokens": 1839,
+  "reasoning_chars": 0,
+  "answer_chars": 6678,
+  "prompt_tok_s": 1405.36,
+  "predicted_tok_s": 119.88,
+  "output_tok_s_wall": 112.88,
+  "files_extracted": [
+    "main.scala",
+    "main.test.scala"
+  ]
+}

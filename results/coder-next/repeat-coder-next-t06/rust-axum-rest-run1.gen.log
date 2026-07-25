@@ -1,0 +1,18 @@
+[rust-axum-rest-run1] requesting…
+  wrote Cargo.toml (297 bytes)
+  wrote src/main.rs (6105 bytes)
+{
+  "ttft_s": 0.891,
+  "total_s": 15.16,
+  "prompt_tokens": 677,
+  "completion_tokens": 1710,
+  "reasoning_chars": 0,
+  "answer_chars": 6469,
+  "prompt_tok_s": 1255.69,
+  "predicted_tok_s": 119.85,
+  "output_tok_s_wall": 112.8,
+  "files_extracted": [
+    "Cargo.toml",
+    "src/main.rs"
+  ]
+}

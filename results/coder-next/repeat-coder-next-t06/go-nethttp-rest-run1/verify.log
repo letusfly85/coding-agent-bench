@@ -1,0 +1,13 @@
+=== go vet ===
+# task_api
+# [task_api]
+vet: ./main_test.go:64:2: declared and not used: req
+=== go build ===
+=== go test ===
+# task_api [task_api.test]
+./main_test.go:64:2: declared and not used: req
+./main_test.go:65:2: declared and not used: rec
+./main_test.go:68:2: declared and not used: app
+FAIL	task_api [build failed]
+FAIL
+VERDICT build=pass test=fail

@@ -1,0 +1,42 @@
+=== scala-cli compile ===
+[[31merror[0m]                 ^^^^^^^^^^^^^^^
+[[31merror[0m] ./main.scala:65:17
+[[31merror[0m] value foreach is not a member of cats.effect.IO[Long]
+[[31merror[0m]           id <- parseId(idPath)
+[[31merror[0m]                 ^^^^^^^^^^^^^^^
+[[31merror[0m] ./main.scala:81:17
+[[31merror[0m] value foreach is not a member of cats.effect.IO[Long]
+[[31merror[0m]           id <- parseId(idPath)
+[[31merror[0m]                 ^^^^^^^^^^^^^^^
+[[31merror[0m] ./main.scala:98:70
+[[31merror[0m] No given instance of type cats.ApplicativeError[cats.effect.IO, ?
+[[31merror[0m]    >: cats.effect.IO[org.http4s.Response[cats.effect.IO]]] was found for parameter F of [33mmethod[0m [35mraiseError[0m in [33mclass[0m [35mApplicativeErrorIdOps[0m
+[[31merror[0m]       case None => BadRequest("Invalid task id").raiseError[IO, Long]
+[[31merror[0m]                                                                      ^
+[[31merror[0m] ./main.scala:102:29
+[[31merror[0m] [33mobject[0m [35mEmberServerBuilder[0m in [33mpackage[0m [35morg.http4s.ember.server[0m does not take type parameters
+[[31merror[0m]     freshApp.flatMap(app => EmberServerBuilder[IO]
+[[31merror[0m]                             ^^^^^^^^^^^^^^^^^^^^^^
+[90mError compiling project (Scala 3.3.4, JVM (17))[0m
+[[33mhint[0m] ./main.scala:2:15
+[[33mhint[0m] "http4s-ember-server is outdated, update to 0.23.36"
+[[33mhint[0m]      http4s-ember-server 0.23.30 -> org.http4s::http4s-ember-server:0.23.36
+[[33mhint[0m] //> using dep org.http4s::http4s-ember-server:0.23.30
+[[33mhint[0m]               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[[33mhint[0m] ./main.scala:3:15
+[[33mhint[0m] "http4s-dsl is outdated, update to 0.23.36"
+[[33mhint[0m]      http4s-dsl 0.23.30 -> org.http4s::http4s-dsl:0.23.36
+[[33mhint[0m] //> using dep org.http4s::http4s-dsl:0.23.30
+[[33mhint[0m]               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[[33mhint[0m] ./main.scala:4:15
+[[33mhint[0m] "http4s-circe is outdated, update to 0.23.36"
+[[33mhint[0m]      http4s-circe 0.23.30 -> org.http4s::http4s-circe:0.23.36
+[[33mhint[0m] //> using dep org.http4s::http4s-circe:0.23.30
+[[33mhint[0m]               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[[33mhint[0m] ./main.scala:5:15
+[[33mhint[0m] "circe-generic is outdated, update to 0.14.16"
+[[33mhint[0m]      circe-generic 0.14.10 -> io.circe::circe-generic:0.14.16
+[[33mhint[0m] //> using dep io.circe::circe-generic:0.14.10
+[[33mhint[0m]               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Compilation failed
+VERDICT build=fail test=skip

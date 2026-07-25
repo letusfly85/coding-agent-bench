@@ -1,0 +1,20 @@
+[go-nethttp-rest-run3] requesting…
+  wrote go.mod (25 bytes)
+  wrote main.go (4151 bytes)
+  wrote main_test.go (3498 bytes)
+{
+  "ttft_s": 0.334,
+  "total_s": 18.75,
+  "prompt_tokens": 587,
+  "completion_tokens": 2210,
+  "reasoning_chars": 0,
+  "answer_chars": 7761,
+  "prompt_tok_s": 48.84,
+  "predicted_tok_s": 120.01,
+  "output_tok_s_wall": 117.87,
+  "files_extracted": [
+    "go.mod",
+    "main.go",
+    "main_test.go"
+  ]
+}

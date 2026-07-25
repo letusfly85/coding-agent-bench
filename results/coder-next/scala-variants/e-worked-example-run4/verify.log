@@ -1,0 +1,42 @@
+=== scala-cli compile ===
+[[31merror[0m] I found:
+[[31merror[0m] 
+[[31merror[0m]     org.http4s.circe.CirceEntityCodec.circeEntityEncoder[[35mcats.effect.IO[0m, [35mAny[0m](
+[[31merror[0m]       io.circe².Encoder.importedEncoder[[35mAny[0m](
+[[31merror[0m]         io.circe².generic.auto.deriveEncoder[[35mAny[0m](
+[[31merror[0m]           /* missing */summon[scala.deriving.Mirror.Of[Any]])
+[[31merror[0m]       )
+[[31merror[0m]     )
+[[31merror[0m] 
+[[31merror[0m] But Failed to synthesize an instance of type scala.deriving.Mirror.Of[Any]:
+[[31merror[0m] 	* [33mclass[0m [35mAny[0m is not a generic product because it is not a case class
+[[31merror[0m] 	* [33mclass[0m [35mAny[0m is not a generic sum because it is not a sealed class
+[[31merror[0m] 
+[[31merror[0m] where:    circe  is a package in [33mpackage[0m [35morg.http4s[0m
+[[31merror[0m]           circe² is a package in [33mpackage[0m [35mio[0m
+[[31merror[0m] .
+[[31merror[0m]             case Some(updatedTask) => Ok(updatedTask)
+[[31merror[0m]                                                      ^
+[90mError compiling project (Scala 3.3.4, JVM (17))[0m
+[[33mhint[0m] ./main.scala:2:15
+[[33mhint[0m] "http4s-ember-server is outdated, update to 0.23.36"
+[[33mhint[0m]      http4s-ember-server 0.23.30 -> org.http4s::http4s-ember-server:0.23.36
+[[33mhint[0m] //> using dep org.http4s::http4s-ember-server:0.23.30
+[[33mhint[0m]               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[[33mhint[0m] ./main.scala:3:15
+[[33mhint[0m] "http4s-dsl is outdated, update to 0.23.36"
+[[33mhint[0m]      http4s-dsl 0.23.30 -> org.http4s::http4s-dsl:0.23.36
+[[33mhint[0m] //> using dep org.http4s::http4s-dsl:0.23.30
+[[33mhint[0m]               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[[33mhint[0m] ./main.scala:4:15
+[[33mhint[0m] "http4s-circe is outdated, update to 0.23.36"
+[[33mhint[0m]      http4s-circe 0.23.30 -> org.http4s::http4s-circe:0.23.36
+[[33mhint[0m] //> using dep org.http4s::http4s-circe:0.23.30
+[[33mhint[0m]               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[[33mhint[0m] ./main.scala:5:15
+[[33mhint[0m] "circe-generic is outdated, update to 0.14.16"
+[[33mhint[0m]      circe-generic 0.14.10 -> io.circe::circe-generic:0.14.16
+[[33mhint[0m] //> using dep io.circe::circe-generic:0.14.10
+[[33mhint[0m]               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Compilation failed
+VERDICT build=fail test=skip

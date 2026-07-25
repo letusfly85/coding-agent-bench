@@ -1,0 +1,42 @@
+=== scala-cli compile ===
+[[31merror[0m] value asJson is not a member of Task
+[[31merror[0m]             case Some(task) => Ok(task.asJson)
+[[31merror[0m]                                   ^^^^^^^^^^^
+[[31merror[0m] ./main.scala:53:33
+[[31merror[0m] value asJson is not a member of Map[Long, Task]
+[[31merror[0m]                 .map(task => Ok(task.asJson))
+[[31merror[0m]                                 ^^^^^^^^^^^
+[[31merror[0m] ./main.scala:57:15
+[[31merror[0m] Found:    [1m[31m([0m[1m[31mresult[0m[1m[31m [0m[1m[31m:[0m[1m[31m [0m[1m[31mcats[0m[1m[31m.[0m[1m[31meffect[0m[1m[31m.[0m[1m[31mIO[0m[1m[31m[[0morg.http4s.Response[cats.effect.IO[1m[31m][0m][1m[31m)[0m
+[[31merror[0m] Required: org.http4s.Response[cats.effect.IO]
+[[31merror[0m]         yield result
+[[31merror[0m]               ^^^^^^
+[[31merror[0m] ./main.scala:63:36
+[[31merror[0m] Found:    cats.effect.IO[org.http4s.[1m[31mStatus[0m[1m[31m [0m[1m[31m|[0m
+[[31merror[0m] [1m[31m [0m[1m[31m [0m[1m[31mcats[0m[1m[31m.[0m[1m[31meffect[0m[1m[31m.[0m[1m[31mIO[0m[1m[31m[[0m[1m[31morg[0m[1m[31m.[0m[1m[31mhttp4s[0m[1m[31m.[0mResponse[cats.effect.IO][1m[31m][0m]
+[[31merror[0m] Required: cats.effect.IO[org.http4s.Response[cats.effect.IO]]
+[[31merror[0m]         }.flatMap { (_, status) => status.pure[IO] }
+[[31merror[0m]                                    ^^^^^^^^^^^^^^^
+[90mError compiling project (Scala 3.3.4, JVM (17))[0m
+[[33mhint[0m] ./main.scala:2:15
+[[33mhint[0m] "http4s-ember-server is outdated, update to 0.23.36"
+[[33mhint[0m]      http4s-ember-server 0.23.30 -> org.http4s::http4s-ember-server:0.23.36
+[[33mhint[0m] //> using dep org.http4s::http4s-ember-server:0.23.30
+[[33mhint[0m]               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[[33mhint[0m] ./main.scala:3:15
+[[33mhint[0m] "http4s-dsl is outdated, update to 0.23.36"
+[[33mhint[0m]      http4s-dsl 0.23.30 -> org.http4s::http4s-dsl:0.23.36
+[[33mhint[0m] //> using dep org.http4s::http4s-dsl:0.23.30
+[[33mhint[0m]               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[[33mhint[0m] ./main.scala:4:15
+[[33mhint[0m] "http4s-circe is outdated, update to 0.23.36"
+[[33mhint[0m]      http4s-circe 0.23.30 -> org.http4s::http4s-circe:0.23.36
+[[33mhint[0m] //> using dep org.http4s::http4s-circe:0.23.30
+[[33mhint[0m]               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[[33mhint[0m] ./main.scala:5:15
+[[33mhint[0m] "circe-generic is outdated, update to 0.14.16"
+[[33mhint[0m]      circe-generic 0.14.10 -> io.circe::circe-generic:0.14.16
+[[33mhint[0m] //> using dep io.circe::circe-generic:0.14.10
+[[33mhint[0m]               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Compilation failed
+VERDICT build=fail test=skip

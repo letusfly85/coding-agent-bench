@@ -1,0 +1,42 @@
+=== cargo build ===
+   --> /root/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/axum-0.8.9/src/routing/method_routing.rs:169:16
+    |
+169 |             S: Clone + Send + Sync + 'static,
+    |                ^^^^^ required by this bound in `delete`
+...
+440 | top_level_handler_fn!(delete, DELETE);
+    | -------------------------------------
+    | |                     |
+    | |                     required by a bound in this function
+    | in this macro invocation
+    = note: this error originates in the macro `top_level_handler_fn` (in Nightly builds, run with -Z macro-backtrace for more info)
+help: consider annotating `AppState` with `#[derive(Clone)]`
+    |
+ 29 + #[derive(Clone)]
+ 30 | struct AppState {
+    |
+
+error[E0277]: the trait bound `AppState: Clone` is not satisfied
+   --> src/main.rs:118:10
+    |
+118 |         .with_state(state)
+    |          ^^^^^^^^^^ the trait `Clone` is not implemented for `AppState`
+    |
+note: required by a bound in `Router::<S>::with_state`
+   --> /root/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/axum-0.8.9/src/routing/mod.rs:140:8
+    |
+140 |     S: Clone + Send + Sync + 'static,
+    |        ^^^^^ required by this bound in `Router::<S>::with_state`
+...
+408 |     pub fn with_state<S2>(self, state: S) -> Router<S2> {
+    |            ---------- required by a bound in this associated function
+help: consider annotating `AppState` with `#[derive(Clone)]`
+    |
+ 29 + #[derive(Clone)]
+ 30 | struct AppState {
+    |
+
+Some errors have detailed explanations: E0277, E0532.
+For more information about an error, try `rustc --explain E0277`.
+error: could not compile `task_api` (bin "task_api") due to 24 previous errors
+VERDICT build=fail test=skip

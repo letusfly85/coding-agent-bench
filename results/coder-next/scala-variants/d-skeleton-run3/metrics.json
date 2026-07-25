@@ -1,0 +1,15 @@
+{
+  "ttft_s": 0.377,
+  "total_s": 13.744,
+  "prompt_tokens": 1096,
+  "completion_tokens": 1601,
+  "reasoning_chars": 0,
+  "answer_chars": 5920,
+  "prompt_tok_s": 47.97,
+  "predicted_tok_s": 119.78,
+  "output_tok_s_wall": 116.49,
+  "files_extracted": [
+    "main.scala",
+    "main.test.scala"
+  ]
+}

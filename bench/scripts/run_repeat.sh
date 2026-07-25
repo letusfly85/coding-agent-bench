@@ -5,6 +5,14 @@
 # rolled badly". Anything reported as a pass rate needs this.
 set -uo pipefail
 
+# Sampling defaults follow the model card. Override per model, e.g.
+#   TEMP=1.0 TOP_K=40 ...   (Qwen3-Coder-Next)
+#   TEMP=0.6 TOP_K=20 ...   (Qwen3.6-27B thinking, coding preset)
+TEMP=${TEMP:-0.6}
+TOP_P=${TOP_P:-0.95}
+TOP_K=${TOP_K:-20}
+MAX_TOKENS=${MAX_TOKENS:-24000}
+
 REPO=${REPO:-/workspace/coding-agent-bench}
 OUT=${OUT:-/workspace/results/repeat}
 PORT=${PORT:-8080}
@@ -20,7 +28,7 @@ for T in $TASKS; do
       --base-url "http://127.0.0.1:$PORT" \
       --prompt-file "$REPO/bench/tasks/$T/PROMPT.md" \
       --out-dir "$OUT" --label "$L" \
-      --temperature 0.6 --top-p 0.95 --top-k 20 --max-tokens 24000 \
+      --temperature "$TEMP" --top-p "$TOP_P" --top-k "$TOP_K" --max-tokens "$MAX_TOKENS" \
       > "$OUT/$L.gen.log" 2>&1
     bash "$REPO/bench/tasks/$T/verify.sh" "$OUT/$L/project" > "$OUT/$L/verify.log" 2>&1
     echo "$L $(grep -hE '^VERDICT' "$OUT/$L/verify.log" 2>/dev/null || echo 'VERDICT build=? test=?')"

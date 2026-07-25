@@ -1,0 +1,12 @@
+=== go vet ===
+=== go build ===
+=== go test ===
+--- FAIL: TestGetTask (0.00s)
+    main_test.go:76: Expected status 200, got 404
+    main_test.go:81: Failed to decode response: invalid character 'T' looking for beginning of value
+--- FAIL: TestDeleteTask (0.00s)
+    main_test.go:121: Expected status 204, got 404
+FAIL
+FAIL	task_api	0.031s
+FAIL
+VERDICT build=pass test=fail

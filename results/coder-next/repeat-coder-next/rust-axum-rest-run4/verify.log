@@ -1,0 +1,83 @@
+=== cargo build ===
+   Compiling memchr v2.8.3
+   Compiling lock_api v0.4.14
+   Compiling form_urlencoded v1.2.2
+   Compiling futures-channel v0.3.33
+   Compiling futures-util v0.3.33
+   Compiling ryu v1.0.23
+   Compiling mime v0.3.17
+   Compiling matchit v0.8.4
+   Compiling tracing v0.1.44
+   Compiling http v1.4.2
+   Compiling http-body v1.1.0
+   Compiling http-body-util v0.1.4
+   Compiling axum-core v0.5.6
+   Compiling errno v0.3.14
+   Compiling mio v1.2.2
+   Compiling socket2 v0.6.5
+   Compiling signal-hook-registry v1.4.8
+   Compiling parking_lot v0.12.5
+   Compiling syn v2.0.119
+   Compiling syn v3.0.3
+   Compiling serde_path_to_error v0.1.20
+   Compiling serde_derive v1.0.229
+   Compiling tokio-macros v2.7.1
+   Compiling tokio v1.53.1
+   Compiling serde_urlencoded v0.7.1
+   Compiling hyper v1.11.0
+   Compiling tower v0.5.3
+   Compiling hyper-util v0.1.20
+   Compiling axum v0.8.9
+   Compiling task_api v0.1.0 (/workspace/results/repeat-coder-next/rust-axum-rest-run4/project)
+warning: unused imports: `delete`, `post`, and `put`
+ --> src/main.rs:4:20
+  |
+4 |     routing::{get, post, put, delete},
+  |                    ^^^^  ^^^  ^^^^^^
+  |
+  = note: `#[warn(unused_imports)]` (part of `#[warn(unused)]`) on by default
+
+warning: `task_api` (bin "task_api") generated 1 warning (run `cargo fix --bin "task_api" -p task_api` to apply 1 suggestion)
+    Finished `dev` profile [unoptimized + debuginfo] target(s) in 47.76s
+=== cargo test ===
+    |
+ 22 |     pub fn new(data: D) -> Self {
+    |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+error[E0599]: no associated function or constant named `from_json` found for struct `http_body_util::Full<D>` in the current scope
+   --> src/main.rs:192:25
+    |
+192 |             .body(Full::from_json([("title", "Get Me")].into_iter()))
+    |                         ^^^^^^^^^ associated function or constant not found in `http_body_util::Full<_>`
+    |
+note: if you're trying to build a new `http_body_util::Full<_>`, consider using `http_body_util::Full::<D>::new` which returns `http_body_util::Full<_>`
+   --> /root/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/http-body-util-0.1.4/src/full.rs:22:5
+    |
+ 22 |     pub fn new(data: D) -> Self {
+    |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+error[E0599]: no associated function or constant named `from_json` found for struct `http_body_util::Full<D>` in the current scope
+   --> src/main.rs:232:25
+    |
+232 |             .body(Full::from_json([("title", "Delete Me")].into_iter()))
+    |                         ^^^^^^^^^ associated function or constant not found in `http_body_util::Full<_>`
+    |
+note: if you're trying to build a new `http_body_util::Full<_>`, consider using `http_body_util::Full::<D>::new` which returns `http_body_util::Full<_>`
+   --> /root/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/http-body-util-0.1.4/src/full.rs:22:5
+    |
+ 22 |     pub fn new(data: D) -> Self {
+    |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+error[E0433]: cannot find module or crate `hyper` in this scope
+   --> src/main.rs:143:71
+    |
+143 |     async fn call_service(app: &Router, req: Request<Full<Bytes>>) -> hyper::Response<Full<Bytes>> {
+    |                                                                       ^^^^^ use of unresolved module or unlinked crate `hyper`
+    |
+    = help: if you wanted to use a crate named `hyper`, use `cargo add hyper` to add it to your `Cargo.toml`
+
+Some errors have detailed explanations: E0432, E0433, E0599.
+For more information about an error, try `rustc --explain E0432`.
+warning: `task_api` (bin "task_api" test) generated 1 warning
+error: could not compile `task_api` (bin "task_api" test) due to 9 previous errors; 1 warning emitted
+VERDICT build=pass test=fail

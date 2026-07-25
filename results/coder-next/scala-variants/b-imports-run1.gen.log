@@ -1,0 +1,18 @@
+[b-imports-run1] requesting…
+  wrote main.scala (3617 bytes)
+  wrote main.test.scala (2786 bytes)
+{
+  "ttft_s": 0.836,
+  "total_s": 15.647,
+  "prompt_tokens": 933,
+  "completion_tokens": 1774,
+  "reasoning_chars": 0,
+  "answer_chars": 6476,
+  "prompt_tok_s": 1240.99,
+  "predicted_tok_s": 119.78,
+  "output_tok_s_wall": 113.38,
+  "files_extracted": [
+    "main.scala",
+    "main.test.scala"
+  ]
+}

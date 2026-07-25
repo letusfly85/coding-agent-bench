@@ -1,0 +1,7 @@
+ctx	kv_type	vram_MiB	status
+8192	f16	0	timeout
+32768	f16	0	timeout
+131072	f16	0	timeout
+262144	f16	0	timeout
+131072	q8_0	0	died
+262144	q8_0	0	timeout

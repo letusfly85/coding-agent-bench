@@ -1,0 +1,42 @@
+=== cargo build ===
+   Compiling hyper v1.11.0
+   Compiling tower v0.5.3
+   Compiling hyper-util v0.1.20
+   Compiling axum v0.8.9
+   Compiling task_api v0.1.0 (/workspace/results/repeat-coder-next-t06/rust-axum-rest-run3/project)
+error[E0432]: unresolved import `http`
+   --> src/main.rs:256:5
+    |
+256 | use http::Request;
+    |     ^^^^
+    |
+help: a similar path exists
+    |
+256 | use axum::http::Request;
+    |     ++++++
+
+warning: unused import: `axum::extract::State`
+   --> src/main.rs:254:5
+    |
+254 | use axum::extract::State;
+    |     ^^^^^^^^^^^^^^^^^^^^
+    |
+    = note: `#[warn(unused_imports)]` (part of `#[warn(unused)]`) on by default
+
+warning: unused import: `axum::Json as AxumJson`
+   --> src/main.rs:255:5
+    |
+255 | use axum::Json as AxumJson;
+    |     ^^^^^^^^^^^^^^^^^^^^^^
+
+error[E0601]: `main` function not found in crate `task_api`
+   --> src/main.rs:256:19
+    |
+256 | use http::Request;
+    |                   ^ consider adding a `main` function to `src/main.rs`
+
+Some errors have detailed explanations: E0432, E0601.
+For more information about an error, try `rustc --explain E0432`.
+warning: `task_api` (bin "task_api") generated 2 warnings
+error: could not compile `task_api` (bin "task_api") due to 2 previous errors; 2 warnings emitted
+VERDICT build=fail test=skip

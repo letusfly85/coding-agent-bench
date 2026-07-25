@@ -1,0 +1,42 @@
+=== cargo build ===
+   Compiling parking_lot v0.12.5
+   Compiling syn v2.0.119
+   Compiling syn v3.0.3
+   Compiling serde_derive v1.0.229
+   Compiling tokio-macros v2.7.1
+   Compiling serde_urlencoded v0.7.1
+   Compiling tokio v1.53.1
+   Compiling hyper v1.11.0
+   Compiling tower v0.5.3
+   Compiling hyper-util v0.1.20
+   Compiling axum v0.8.9
+   Compiling task_api v0.1.0 (/workspace/results/repeat-coder-next/rust-axum-rest-run2/project)
+error: struct literal body without path
+  --> src/main.rs:43:27
+   |
+43 | async fn health() -> Json<{ json: &str }> {
+   |                           ^^^^^^^^^^^^^^
+   |
+help: you might have forgotten to add the struct literal inside the block
+   |
+43 | async fn health() -> Json<{ SomeStruct { json: &str } }> {
+   |                           ++++++++++++                +
+
+warning: unused import: `response::IntoResponse`
+ --> src/main.rs:4:5
+  |
+4 |     response::IntoResponse,
+  |     ^^^^^^^^^^^^^^^^^^^^^^
+  |
+  = note: `#[warn(unused_imports)]` (part of `#[warn(unused)]`) on by default
+
+error[E0747]: constant provided when a type was expected
+  --> src/main.rs:43:27
+   |
+43 | async fn health() -> Json<{ json: &str }> {
+   |                           ^^^^^^^^^^^^^^
+
+For more information about this error, try `rustc --explain E0747`.
+warning: `task_api` (bin "task_api") generated 1 warning
+error: could not compile `task_api` (bin "task_api") due to 2 previous errors; 1 warning emitted
+VERDICT build=fail test=skip

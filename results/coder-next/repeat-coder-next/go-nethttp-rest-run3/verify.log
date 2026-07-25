@@ -1,0 +1,5 @@
+=== go vet ===
+=== go build ===
+=== go test ===
+?   	task_api	[no test files]
+VERDICT build=pass test=pass

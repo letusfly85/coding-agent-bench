@@ -1,0 +1,71 @@
+=== scala-cli compile ===
+[90mCompiling project (Scala 3.3.4, JVM (17))[0m
+[[33mwarn[0m] ./main.scala:58:19
+[[33mwarn[0m] [33mmatch[0m may not be exhaustive.
+[[33mwarn[0m] 
+[[33mwarn[0m] It would fail on pattern case: Task(_, _, _)
+[[33mwarn[0m]           resp <- result match
+[[33mwarn[0m]                   ^^^^^^
+[90mCompiled project (Scala 3.3.4, JVM (17))[0m
+[[33mhint[0m] ./main.scala:2:15
+[[33mhint[0m] "http4s-ember-server is outdated, update to 0.23.36"
+[[33mhint[0m]      http4s-ember-server 0.23.30 -> org.http4s::http4s-ember-server:0.23.36
+[[33mhint[0m] //> using dep org.http4s::http4s-ember-server:0.23.30
+[[33mhint[0m]               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[[33mhint[0m] ./main.scala:3:15
+[[33mhint[0m] "http4s-dsl is outdated, update to 0.23.36"
+[[33mhint[0m]      http4s-dsl 0.23.30 -> org.http4s::http4s-dsl:0.23.36
+[[33mhint[0m] //> using dep org.http4s::http4s-dsl:0.23.30
+[[33mhint[0m]               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[[33mhint[0m] ./main.scala:4:15
+[[33mhint[0m] "http4s-circe is outdated, update to 0.23.36"
+[[33mhint[0m]      http4s-circe 0.23.30 -> org.http4s::http4s-circe:0.23.36
+[[33mhint[0m] //> using dep org.http4s::http4s-circe:0.23.30
+[[33mhint[0m]               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[[33mhint[0m] ./main.scala:5:15
+[[33mhint[0m] "circe-generic is outdated, update to 0.14.16"
+[[33mhint[0m]      circe-generic 0.14.10 -> io.circe::circe-generic:0.14.16
+[[33mhint[0m] //> using dep io.circe::circe-generic:0.14.10
+[[33mhint[0m]               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+=== scala-cli test ===
+Downloaded https://repo1.maven.org/maven2/org/scalameta/junit-interface/1.0.4/junit-interface-1.0.4.jar
+[90mCompiling project (test, Scala 3.3.4, JVM (17))[0m
+[[31merror[0m] ./main.test.scala:14:8
+[[31merror[0m] value parser is not a member of io.circe, but could be made available as an extension method.
+[[31merror[0m] 
+[[31merror[0m] The following import might make progress towards fixing the problem:
+[[31merror[0m] 
+[[31merror[0m]   import munit.Clue.generate
+[[31merror[0m] 
+[[31merror[0m] import io.circe.parser._
+[[31merror[0m]        ^^^^^^^^^^^^^^^
+[90mError compiling project (test, Scala 3.3.4, JVM (17))[0m
+Downloading https://repo1.maven.org/maven2/org/scalameta/munit_3/maven-metadata.xml
+Downloaded https://repo1.maven.org/maven2/org/scalameta/munit_3/maven-metadata.xml
+[[33mhint[0m] ./main.scala:6:20
+[[33mhint[0m] "munit is outdated, update to 1.3.4"
+[[33mhint[0m]      munit 1.0.4 -> org.scalameta::munit::1.3.4
+[[33mhint[0m] //> using test.dep org.scalameta::munit::1.0.4
+[[33mhint[0m]                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[[33mhint[0m] ./main.test.scala:2:15
+[[33mhint[0m] "http4s-ember-server is outdated, update to 0.23.36"
+[[33mhint[0m]      http4s-ember-server 0.23.30 -> org.http4s::http4s-ember-server:0.23.36
+[[33mhint[0m] //> using dep org.http4s::http4s-ember-server:0.23.30
+[[33mhint[0m]               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[[33mhint[0m] ./main.test.scala:3:15
+[[33mhint[0m] "http4s-dsl is outdated, update to 0.23.36"
+[[33mhint[0m]      http4s-dsl 0.23.30 -> org.http4s::http4s-dsl:0.23.36
+[[33mhint[0m] //> using dep org.http4s::http4s-dsl:0.23.30
+[[33mhint[0m]               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[[33mhint[0m] ./main.test.scala:4:15
+[[33mhint[0m] "http4s-circe is outdated, update to 0.23.36"
+[[33mhint[0m]      http4s-circe 0.23.30 -> org.http4s::http4s-circe:0.23.36
+[[33mhint[0m] //> using dep org.http4s::http4s-circe:0.23.30
+[[33mhint[0m]               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[[33mhint[0m] ./main.test.scala:5:15
+[[33mhint[0m] "circe-generic is outdated, update to 0.14.16"
+[[33mhint[0m]      circe-generic 0.14.10 -> io.circe::circe-generic:0.14.16
+[[33mhint[0m] //> using dep io.circe::circe-generic:0.14.10
+[[33mhint[0m]               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Compilation failed
+VERDICT build=pass test=fail

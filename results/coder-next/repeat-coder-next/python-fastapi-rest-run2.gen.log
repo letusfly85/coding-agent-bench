@@ -1,0 +1,20 @@
+[python-fastapi-rest-run2] requesting…
+  wrote app/__init__.py (34 bytes)
+  wrote app/main.py (1870 bytes)
+  wrote tests/test_api.py (1476 bytes)
+{
+  "ttft_s": 0.306,
+  "total_s": 7.68,
+  "prompt_tokens": 584,
+  "completion_tokens": 882,
+  "reasoning_chars": 0,
+  "answer_chars": 3499,
+  "prompt_tok_s": 48.34,
+  "predicted_tok_s": 119.61,
+  "output_tok_s_wall": 114.84,
+  "files_extracted": [
+    "app/__init__.py",
+    "app/main.py",
+    "tests/test_api.py"
+  ]
+}

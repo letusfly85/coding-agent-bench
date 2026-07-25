@@ -1,0 +1,42 @@
+=== cargo build ===
+   Compiling serde_json v1.0.151
+   Compiling lock_api v0.4.14
+   Compiling futures-channel v0.3.33
+   Compiling memchr v2.8.3
+   Compiling tracing-core v0.1.36
+   Compiling form_urlencoded v1.2.2
+   Compiling futures-util v0.3.33
+   Compiling ryu v1.0.23
+   Compiling mime v0.3.17
+   Compiling matchit v0.8.4
+   Compiling http v1.4.2
+   Compiling tracing v0.1.44
+   Compiling http-body v1.1.0
+   Compiling http-body-util v0.1.4
+   Compiling axum-core v0.5.6
+   Compiling errno v0.3.14
+   Compiling socket2 v0.6.5
+   Compiling mio v1.2.2
+   Compiling signal-hook-registry v1.4.8
+   Compiling parking_lot v0.12.5
+   Compiling syn v2.0.119
+   Compiling syn v3.0.3
+   Compiling serde_path_to_error v0.1.20
+   Compiling tokio-macros v2.7.1
+   Compiling serde_derive v1.0.229
+   Compiling serde_urlencoded v0.7.1
+   Compiling tokio v1.53.1
+   Compiling hyper v1.11.0
+   Compiling tower v0.5.3
+   Compiling hyper-util v0.1.20
+   Compiling axum v0.8.9
+   Compiling task_api v0.1.0 (/workspace/results/repeat-coder-next-t06/rust-axum-rest-run4/project)
+error[E0433]: cannot find `Server` in `axum`
+   --> src/main.rs:126:11
+    |
+126 |     axum::Server::bind(&addr)
+    |           ^^^^^^ could not find `Server` in `axum`
+
+For more information about this error, try `rustc --explain E0433`.
+error: could not compile `task_api` (bin "task_api") due to 1 previous error
+VERDICT build=fail test=skip

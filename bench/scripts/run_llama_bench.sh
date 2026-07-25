@@ -8,12 +8,16 @@ set -euo pipefail
 BIN=${BIN:-/workspace/llama.cpp/build/bin/llama-bench}
 MODELS_DIR=${MODELS_DIR:-/workspace/models}
 OUT=${OUT:-/workspace/results/llama-bench}
+# On a network filesystem mmap can hang the loader; set LOAD_MODE=none there.
+LOAD_MODE=${LOAD_MODE:-}
+LOAD_ARGS=()
+if [ -n "$LOAD_MODE" ]; then LOAD_ARGS=(--load-mode "$LOAD_MODE"); fi
 mkdir -p "$OUT"
 
 for M in "$@"; do
   NAME=$(basename "$M" .gguf)
   echo "=== $NAME ==="
-  "$BIN" -m "$MODELS_DIR/$M" \
+  "$BIN" -m "$MODELS_DIR/$M" "${LOAD_ARGS[@]}" \
     -ngl 99 -fa 1 \
     -p 512,4096 -n 128 \
     -d 0,8192,32768 \

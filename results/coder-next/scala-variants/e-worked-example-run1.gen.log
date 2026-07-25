@@ -1,0 +1,18 @@
+[e-worked-example-run1] requesting…
+  wrote main.scala (2682 bytes)
+  wrote main.test.scala (2523 bytes)
+{
+  "ttft_s": 1.322,
+  "total_s": 13.816,
+  "prompt_tokens": 1368,
+  "completion_tokens": 1494,
+  "reasoning_chars": 0,
+  "answer_chars": 5278,
+  "prompt_tok_s": 1417.19,
+  "predicted_tok_s": 119.59,
+  "output_tok_s_wall": 108.14,
+  "files_extracted": [
+    "main.scala",
+    "main.test.scala"
+  ]
+}
